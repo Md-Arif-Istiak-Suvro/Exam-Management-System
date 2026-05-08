@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Questions));
             QsnBack1 = new Panel();
+            QuestionsDGV = new DataGridView();
+            AnswerTb = new MaterialSkin.Controls.MaterialTextBox2();
             QsnBankLabel = new Label();
-            dataGridViewQsn = new DataGridView();
-            resetBtn = new MaterialSkin.Controls.MaterialButton();
-            editBtn = new MaterialSkin.Controls.MaterialButton();
-            saveBtn = new MaterialSkin.Controls.MaterialButton();
-            Opt4 = new MaterialSkin.Controls.MaterialTextBox2();
-            Opt2 = new MaterialSkin.Controls.MaterialTextBox2();
-            Opt1 = new MaterialSkin.Controls.MaterialTextBox2();
-            Opt3 = new MaterialSkin.Controls.MaterialTextBox2();
-            SubjrctSelect = new ComboBox();
-            QsnWrite = new MaterialSkin.Controls.MaterialTextBox2();
+            ResetBtn = new MaterialSkin.Controls.MaterialButton();
+            EditBtn = new MaterialSkin.Controls.MaterialButton();
+            SaveBtn = new MaterialSkin.Controls.MaterialButton();
+            Op4Tb = new MaterialSkin.Controls.MaterialTextBox2();
+            Op2Tb = new MaterialSkin.Controls.MaterialTextBox2();
+            Op1Tb = new MaterialSkin.Controls.MaterialTextBox2();
+            Op3Tb = new MaterialSkin.Controls.MaterialTextBox2();
+            SubjectCb = new ComboBox();
+            QuestTb = new MaterialSkin.Controls.MaterialTextBox2();
             QsnQsnPanel = new Panel();
             QsnCandidates = new Label();
             Qsnsub = new Label();
@@ -54,7 +55,7 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             QsnBack1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewQsn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)QuestionsDGV).BeginInit();
             QsnBack2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -67,17 +68,18 @@
             // QsnBack1
             // 
             QsnBack1.BackColor = Color.BlueViolet;
+            QsnBack1.Controls.Add(QuestionsDGV);
+            QsnBack1.Controls.Add(AnswerTb);
             QsnBack1.Controls.Add(QsnBankLabel);
-            QsnBack1.Controls.Add(dataGridViewQsn);
-            QsnBack1.Controls.Add(resetBtn);
-            QsnBack1.Controls.Add(editBtn);
-            QsnBack1.Controls.Add(saveBtn);
-            QsnBack1.Controls.Add(Opt4);
-            QsnBack1.Controls.Add(Opt2);
-            QsnBack1.Controls.Add(Opt1);
-            QsnBack1.Controls.Add(Opt3);
-            QsnBack1.Controls.Add(SubjrctSelect);
-            QsnBack1.Controls.Add(QsnWrite);
+            QsnBack1.Controls.Add(ResetBtn);
+            QsnBack1.Controls.Add(EditBtn);
+            QsnBack1.Controls.Add(SaveBtn);
+            QsnBack1.Controls.Add(Op4Tb);
+            QsnBack1.Controls.Add(Op2Tb);
+            QsnBack1.Controls.Add(Op1Tb);
+            QsnBack1.Controls.Add(Op3Tb);
+            QsnBack1.Controls.Add(SubjectCb);
+            QsnBack1.Controls.Add(QuestTb);
             QsnBack1.Controls.Add(QsnQsnPanel);
             QsnBack1.Controls.Add(QsnCandidates);
             QsnBack1.Controls.Add(Qsnsub);
@@ -89,6 +91,48 @@
             QsnBack1.Size = new Size(1151, 687);
             QsnBack1.TabIndex = 0;
             // 
+            // QuestionsDGV
+            // 
+            QuestionsDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            QuestionsDGV.BackgroundColor = SystemColors.ButtonHighlight;
+            QuestionsDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            QuestionsDGV.Location = new Point(0, 381);
+            QuestionsDGV.Name = "QuestionsDGV";
+            QuestionsDGV.RowHeadersWidth = 51;
+            QuestionsDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            QuestionsDGV.Size = new Size(1085, 303);
+            QuestionsDGV.TabIndex = 18;
+            QuestionsDGV.CellContentClick += QuestionsDGV_CellContentClick;
+            // 
+            // AnswerTb
+            // 
+            AnswerTb.AnimateReadOnly = false;
+            AnswerTb.BackgroundImageLayout = ImageLayout.None;
+            AnswerTb.CharacterCasing = CharacterCasing.Normal;
+            AnswerTb.Depth = 0;
+            AnswerTb.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            AnswerTb.HideSelection = true;
+            AnswerTb.LeadingIcon = null;
+            AnswerTb.Location = new Point(35, 305);
+            AnswerTb.MaxLength = 32767;
+            AnswerTb.MouseState = MaterialSkin.MouseState.OUT;
+            AnswerTb.Name = "AnswerTb";
+            AnswerTb.PasswordChar = '\0';
+            AnswerTb.PrefixSuffixText = null;
+            AnswerTb.ReadOnly = false;
+            AnswerTb.RightToLeft = RightToLeft.No;
+            AnswerTb.SelectedText = "";
+            AnswerTb.SelectionLength = 0;
+            AnswerTb.SelectionStart = 0;
+            AnswerTb.ShortcutsEnabled = true;
+            AnswerTb.Size = new Size(268, 48);
+            AnswerTb.TabIndex = 17;
+            AnswerTb.TabStop = false;
+            AnswerTb.Text = "Answer";
+            AnswerTb.TextAlign = HorizontalAlignment.Left;
+            AnswerTb.TrailingIcon = null;
+            AnswerTb.UseSystemPasswordChar = false;
+            // 
             // QsnBankLabel
             // 
             QsnBankLabel.AutoSize = true;
@@ -99,234 +143,227 @@
             QsnBankLabel.TabIndex = 16;
             QsnBankLabel.Text = "Question Bank";
             // 
-            // dataGridViewQsn
+            // ResetBtn
             // 
-            dataGridViewQsn.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridViewQsn.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewQsn.Location = new Point(12, 381);
-            dataGridViewQsn.Name = "dataGridViewQsn";
-            dataGridViewQsn.RowHeadersWidth = 51;
-            dataGridViewQsn.Size = new Size(1061, 293);
-            dataGridViewQsn.TabIndex = 15;
+            ResetBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ResetBtn.BackColor = Color.GhostWhite;
+            ResetBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            ResetBtn.Depth = 0;
+            ResetBtn.ForeColor = SystemColors.ButtonHighlight;
+            ResetBtn.HighEmphasis = true;
+            ResetBtn.Icon = null;
+            ResetBtn.Location = new Point(681, 305);
+            ResetBtn.Margin = new Padding(4, 6, 4, 6);
+            ResetBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            ResetBtn.Name = "ResetBtn";
+            ResetBtn.NoAccentTextColor = Color.Empty;
+            ResetBtn.Size = new Size(65, 36);
+            ResetBtn.TabIndex = 14;
+            ResetBtn.Text = "Reset";
+            ResetBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            ResetBtn.UseAccentColor = false;
+            ResetBtn.UseVisualStyleBackColor = false;
+            ResetBtn.Click += ResetBtn_Click;
             // 
-            // resetBtn
+            // EditBtn
             // 
-            resetBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            resetBtn.BackColor = Color.GhostWhite;
-            resetBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            resetBtn.Depth = 0;
-            resetBtn.ForeColor = SystemColors.ButtonHighlight;
-            resetBtn.HighEmphasis = true;
-            resetBtn.Icon = null;
-            resetBtn.Location = new Point(681, 305);
-            resetBtn.Margin = new Padding(4, 6, 4, 6);
-            resetBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            resetBtn.Name = "resetBtn";
-            resetBtn.NoAccentTextColor = Color.Empty;
-            resetBtn.Size = new Size(65, 36);
-            resetBtn.TabIndex = 14;
-            resetBtn.Text = "Reset";
-            resetBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            resetBtn.UseAccentColor = false;
-            resetBtn.UseVisualStyleBackColor = false;
+            EditBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            EditBtn.BackColor = Color.GhostWhite;
+            EditBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            EditBtn.Depth = 0;
+            EditBtn.ForeColor = SystemColors.ButtonHighlight;
+            EditBtn.HighEmphasis = true;
+            EditBtn.Icon = null;
+            EditBtn.Location = new Point(519, 305);
+            EditBtn.Margin = new Padding(4, 6, 4, 6);
+            EditBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            EditBtn.Name = "EditBtn";
+            EditBtn.NoAccentTextColor = Color.Empty;
+            EditBtn.Size = new Size(64, 36);
+            EditBtn.TabIndex = 13;
+            EditBtn.Text = "Edit";
+            EditBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            EditBtn.UseAccentColor = false;
+            EditBtn.UseVisualStyleBackColor = false;
+            EditBtn.Click += EditBtn_Click;
             // 
-            // editBtn
+            // SaveBtn
             // 
-            editBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            editBtn.BackColor = Color.GhostWhite;
-            editBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            editBtn.Depth = 0;
-            editBtn.ForeColor = SystemColors.ButtonHighlight;
-            editBtn.HighEmphasis = true;
-            editBtn.Icon = null;
-            editBtn.Location = new Point(519, 305);
-            editBtn.Margin = new Padding(4, 6, 4, 6);
-            editBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            editBtn.Name = "editBtn";
-            editBtn.NoAccentTextColor = Color.Empty;
-            editBtn.Size = new Size(64, 36);
-            editBtn.TabIndex = 13;
-            editBtn.Text = "Edit";
-            editBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            editBtn.UseAccentColor = false;
-            editBtn.UseVisualStyleBackColor = false;
+            SaveBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            SaveBtn.BackColor = Color.GhostWhite;
+            SaveBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            SaveBtn.Depth = 0;
+            SaveBtn.ForeColor = SystemColors.ButtonHighlight;
+            SaveBtn.HighEmphasis = true;
+            SaveBtn.Icon = null;
+            SaveBtn.Location = new Point(365, 305);
+            SaveBtn.Margin = new Padding(4, 6, 4, 6);
+            SaveBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            SaveBtn.Name = "SaveBtn";
+            SaveBtn.NoAccentTextColor = Color.Empty;
+            SaveBtn.Size = new Size(64, 36);
+            SaveBtn.TabIndex = 12;
+            SaveBtn.Text = "Save";
+            SaveBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            SaveBtn.UseAccentColor = false;
+            SaveBtn.UseVisualStyleBackColor = false;
+            SaveBtn.Click += SaveBtn_Click;
             // 
-            // saveBtn
+            // Op4Tb
             // 
-            saveBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            saveBtn.BackColor = Color.GhostWhite;
-            saveBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            saveBtn.Depth = 0;
-            saveBtn.ForeColor = SystemColors.ButtonHighlight;
-            saveBtn.HighEmphasis = true;
-            saveBtn.Icon = null;
-            saveBtn.Location = new Point(365, 305);
-            saveBtn.Margin = new Padding(4, 6, 4, 6);
-            saveBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            saveBtn.Name = "saveBtn";
-            saveBtn.NoAccentTextColor = Color.Empty;
-            saveBtn.Size = new Size(64, 36);
-            saveBtn.TabIndex = 12;
-            saveBtn.Text = "Save";
-            saveBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            saveBtn.UseAccentColor = false;
-            saveBtn.UseVisualStyleBackColor = false;
+            Op4Tb.AnimateReadOnly = false;
+            Op4Tb.BackgroundImageLayout = ImageLayout.None;
+            Op4Tb.CharacterCasing = CharacterCasing.Normal;
+            Op4Tb.Depth = 0;
+            Op4Tb.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Op4Tb.HideSelection = true;
+            Op4Tb.LeadingIcon = null;
+            Op4Tb.Location = new Point(666, 233);
+            Op4Tb.MaxLength = 32767;
+            Op4Tb.MouseState = MaterialSkin.MouseState.OUT;
+            Op4Tb.Name = "Op4Tb";
+            Op4Tb.PasswordChar = '\0';
+            Op4Tb.PrefixSuffixText = null;
+            Op4Tb.ReadOnly = false;
+            Op4Tb.RightToLeft = RightToLeft.No;
+            Op4Tb.SelectedText = "";
+            Op4Tb.SelectionLength = 0;
+            Op4Tb.SelectionStart = 0;
+            Op4Tb.ShortcutsEnabled = true;
+            Op4Tb.Size = new Size(268, 48);
+            Op4Tb.TabIndex = 11;
+            Op4Tb.TabStop = false;
+            Op4Tb.Text = "Option4";
+            Op4Tb.TextAlign = HorizontalAlignment.Center;
+            Op4Tb.TrailingIcon = null;
+            Op4Tb.UseSystemPasswordChar = false;
             // 
-            // Opt4
+            // Op2Tb
             // 
-            Opt4.AnimateReadOnly = false;
-            Opt4.BackgroundImageLayout = ImageLayout.None;
-            Opt4.CharacterCasing = CharacterCasing.Normal;
-            Opt4.Depth = 0;
-            Opt4.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Opt4.HideSelection = true;
-            Opt4.LeadingIcon = null;
-            Opt4.Location = new Point(666, 233);
-            Opt4.MaxLength = 32767;
-            Opt4.MouseState = MaterialSkin.MouseState.OUT;
-            Opt4.Name = "Opt4";
-            Opt4.PasswordChar = '\0';
-            Opt4.PrefixSuffixText = null;
-            Opt4.ReadOnly = false;
-            Opt4.RightToLeft = RightToLeft.No;
-            Opt4.SelectedText = "";
-            Opt4.SelectionLength = 0;
-            Opt4.SelectionStart = 0;
-            Opt4.ShortcutsEnabled = true;
-            Opt4.Size = new Size(268, 48);
-            Opt4.TabIndex = 11;
-            Opt4.TabStop = false;
-            Opt4.Text = "Option4";
-            Opt4.TextAlign = HorizontalAlignment.Center;
-            Opt4.TrailingIcon = null;
-            Opt4.UseSystemPasswordChar = false;
+            Op2Tb.AnimateReadOnly = false;
+            Op2Tb.BackgroundImageLayout = ImageLayout.None;
+            Op2Tb.CharacterCasing = CharacterCasing.Normal;
+            Op2Tb.Depth = 0;
+            Op2Tb.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Op2Tb.HideSelection = true;
+            Op2Tb.LeadingIcon = null;
+            Op2Tb.Location = new Point(666, 129);
+            Op2Tb.MaxLength = 32767;
+            Op2Tb.MouseState = MaterialSkin.MouseState.OUT;
+            Op2Tb.Name = "Op2Tb";
+            Op2Tb.PasswordChar = '\0';
+            Op2Tb.PrefixSuffixText = null;
+            Op2Tb.ReadOnly = false;
+            Op2Tb.RightToLeft = RightToLeft.No;
+            Op2Tb.SelectedText = "";
+            Op2Tb.SelectionLength = 0;
+            Op2Tb.SelectionStart = 0;
+            Op2Tb.ShortcutsEnabled = true;
+            Op2Tb.Size = new Size(268, 48);
+            Op2Tb.TabIndex = 10;
+            Op2Tb.TabStop = false;
+            Op2Tb.Text = "Option2";
+            Op2Tb.TextAlign = HorizontalAlignment.Center;
+            Op2Tb.TrailingIcon = null;
+            Op2Tb.UseSystemPasswordChar = false;
             // 
-            // Opt2
+            // Op1Tb
             // 
-            Opt2.AnimateReadOnly = false;
-            Opt2.BackgroundImageLayout = ImageLayout.None;
-            Opt2.CharacterCasing = CharacterCasing.Normal;
-            Opt2.Depth = 0;
-            Opt2.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Opt2.HideSelection = true;
-            Opt2.LeadingIcon = null;
-            Opt2.Location = new Point(666, 129);
-            Opt2.MaxLength = 32767;
-            Opt2.MouseState = MaterialSkin.MouseState.OUT;
-            Opt2.Name = "Opt2";
-            Opt2.PasswordChar = '\0';
-            Opt2.PrefixSuffixText = null;
-            Opt2.ReadOnly = false;
-            Opt2.RightToLeft = RightToLeft.No;
-            Opt2.SelectedText = "";
-            Opt2.SelectionLength = 0;
-            Opt2.SelectionStart = 0;
-            Opt2.ShortcutsEnabled = true;
-            Opt2.Size = new Size(268, 48);
-            Opt2.TabIndex = 10;
-            Opt2.TabStop = false;
-            Opt2.Text = "Option2";
-            Opt2.TextAlign = HorizontalAlignment.Center;
-            Opt2.TrailingIcon = null;
-            Opt2.UseSystemPasswordChar = false;
+            Op1Tb.AnimateReadOnly = false;
+            Op1Tb.BackgroundImageLayout = ImageLayout.None;
+            Op1Tb.CharacterCasing = CharacterCasing.Normal;
+            Op1Tb.Depth = 0;
+            Op1Tb.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Op1Tb.HideSelection = true;
+            Op1Tb.LeadingIcon = null;
+            Op1Tb.Location = new Point(332, 129);
+            Op1Tb.MaxLength = 32767;
+            Op1Tb.MouseState = MaterialSkin.MouseState.OUT;
+            Op1Tb.Name = "Op1Tb";
+            Op1Tb.PasswordChar = '\0';
+            Op1Tb.PrefixSuffixText = null;
+            Op1Tb.ReadOnly = false;
+            Op1Tb.RightToLeft = RightToLeft.No;
+            Op1Tb.SelectedText = "";
+            Op1Tb.SelectionLength = 0;
+            Op1Tb.SelectionStart = 0;
+            Op1Tb.ShortcutsEnabled = true;
+            Op1Tb.Size = new Size(270, 48);
+            Op1Tb.TabIndex = 9;
+            Op1Tb.TabStop = false;
+            Op1Tb.Text = "Option1";
+            Op1Tb.TextAlign = HorizontalAlignment.Center;
+            Op1Tb.TrailingIcon = null;
+            Op1Tb.UseSystemPasswordChar = false;
             // 
-            // Opt1
+            // Op3Tb
             // 
-            Opt1.AnimateReadOnly = false;
-            Opt1.BackgroundImageLayout = ImageLayout.None;
-            Opt1.CharacterCasing = CharacterCasing.Normal;
-            Opt1.Depth = 0;
-            Opt1.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Opt1.HideSelection = true;
-            Opt1.LeadingIcon = null;
-            Opt1.Location = new Point(332, 129);
-            Opt1.MaxLength = 32767;
-            Opt1.MouseState = MaterialSkin.MouseState.OUT;
-            Opt1.Name = "Opt1";
-            Opt1.PasswordChar = '\0';
-            Opt1.PrefixSuffixText = null;
-            Opt1.ReadOnly = false;
-            Opt1.RightToLeft = RightToLeft.No;
-            Opt1.SelectedText = "";
-            Opt1.SelectionLength = 0;
-            Opt1.SelectionStart = 0;
-            Opt1.ShortcutsEnabled = true;
-            Opt1.Size = new Size(270, 48);
-            Opt1.TabIndex = 9;
-            Opt1.TabStop = false;
-            Opt1.Text = "Option1";
-            Opt1.TextAlign = HorizontalAlignment.Center;
-            Opt1.TrailingIcon = null;
-            Opt1.UseSystemPasswordChar = false;
+            Op3Tb.AnimateReadOnly = false;
+            Op3Tb.BackgroundImageLayout = ImageLayout.None;
+            Op3Tb.CharacterCasing = CharacterCasing.Normal;
+            Op3Tb.Depth = 0;
+            Op3Tb.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Op3Tb.HideSelection = true;
+            Op3Tb.LeadingIcon = null;
+            Op3Tb.Location = new Point(332, 233);
+            Op3Tb.MaxLength = 32767;
+            Op3Tb.MouseState = MaterialSkin.MouseState.OUT;
+            Op3Tb.Name = "Op3Tb";
+            Op3Tb.PasswordChar = '\0';
+            Op3Tb.PrefixSuffixText = null;
+            Op3Tb.ReadOnly = false;
+            Op3Tb.RightToLeft = RightToLeft.No;
+            Op3Tb.SelectedText = "";
+            Op3Tb.SelectionLength = 0;
+            Op3Tb.SelectionStart = 0;
+            Op3Tb.ShortcutsEnabled = true;
+            Op3Tb.Size = new Size(270, 48);
+            Op3Tb.TabIndex = 8;
+            Op3Tb.TabStop = false;
+            Op3Tb.Text = "Option3";
+            Op3Tb.TextAlign = HorizontalAlignment.Center;
+            Op3Tb.TrailingIcon = null;
+            Op3Tb.UseSystemPasswordChar = false;
             // 
-            // Opt3
+            // SubjectCb
             // 
-            Opt3.AnimateReadOnly = false;
-            Opt3.BackgroundImageLayout = ImageLayout.None;
-            Opt3.CharacterCasing = CharacterCasing.Normal;
-            Opt3.Depth = 0;
-            Opt3.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Opt3.HideSelection = true;
-            Opt3.LeadingIcon = null;
-            Opt3.Location = new Point(332, 233);
-            Opt3.MaxLength = 32767;
-            Opt3.MouseState = MaterialSkin.MouseState.OUT;
-            Opt3.Name = "Opt3";
-            Opt3.PasswordChar = '\0';
-            Opt3.PrefixSuffixText = null;
-            Opt3.ReadOnly = false;
-            Opt3.RightToLeft = RightToLeft.No;
-            Opt3.SelectedText = "";
-            Opt3.SelectionLength = 0;
-            Opt3.SelectionStart = 0;
-            Opt3.ShortcutsEnabled = true;
-            Opt3.Size = new Size(270, 48);
-            Opt3.TabIndex = 8;
-            Opt3.TabStop = false;
-            Opt3.Text = "Option3";
-            Opt3.TextAlign = HorizontalAlignment.Center;
-            Opt3.TrailingIcon = null;
-            Opt3.UseSystemPasswordChar = false;
+            SubjectCb.Font = new Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SubjectCb.ForeColor = Color.Black;
+            SubjectCb.FormattingEnabled = true;
+            SubjectCb.Location = new Point(825, 34);
+            SubjectCb.Name = "SubjectCb";
+            SubjectCb.Size = new Size(248, 36);
+            SubjectCb.TabIndex = 7;
+            SubjectCb.Text = "Subject";
             // 
-            // SubjrctSelect
+            // QuestTb
             // 
-            SubjrctSelect.Font = new Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SubjrctSelect.ForeColor = SystemColors.ControlText;
-            SubjrctSelect.FormattingEnabled = true;
-            SubjrctSelect.Location = new Point(845, 40);
-            SubjrctSelect.Name = "SubjrctSelect";
-            SubjrctSelect.Size = new Size(154, 36);
-            SubjrctSelect.TabIndex = 7;
-            SubjrctSelect.Text = "Subject";
-            // 
-            // QsnWrite
-            // 
-            QsnWrite.AnimateReadOnly = false;
-            QsnWrite.BackgroundImageLayout = ImageLayout.None;
-            QsnWrite.CharacterCasing = CharacterCasing.Normal;
-            QsnWrite.Depth = 0;
-            QsnWrite.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            QsnWrite.HideSelection = true;
-            QsnWrite.LeadingIcon = null;
-            QsnWrite.Location = new Point(35, 185);
-            QsnWrite.MaxLength = 32767;
-            QsnWrite.MouseState = MaterialSkin.MouseState.OUT;
-            QsnWrite.Name = "QsnWrite";
-            QsnWrite.PasswordChar = '\0';
-            QsnWrite.PrefixSuffixText = null;
-            QsnWrite.ReadOnly = false;
-            QsnWrite.RightToLeft = RightToLeft.No;
-            QsnWrite.SelectedText = "";
-            QsnWrite.SelectionLength = 0;
-            QsnWrite.SelectionStart = 0;
-            QsnWrite.ShortcutsEnabled = true;
-            QsnWrite.Size = new Size(268, 48);
-            QsnWrite.TabIndex = 6;
-            QsnWrite.TabStop = false;
-            QsnWrite.Text = "Questions";
-            QsnWrite.TextAlign = HorizontalAlignment.Center;
-            QsnWrite.TrailingIcon = null;
-            QsnWrite.UseSystemPasswordChar = false;
+            QuestTb.AnimateReadOnly = false;
+            QuestTb.BackgroundImageLayout = ImageLayout.None;
+            QuestTb.CharacterCasing = CharacterCasing.Normal;
+            QuestTb.Depth = 0;
+            QuestTb.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            QuestTb.HideSelection = true;
+            QuestTb.LeadingIcon = null;
+            QuestTb.Location = new Point(35, 185);
+            QuestTb.MaxLength = 32767;
+            QuestTb.MouseState = MaterialSkin.MouseState.OUT;
+            QuestTb.Name = "QuestTb";
+            QuestTb.PasswordChar = '\0';
+            QuestTb.PrefixSuffixText = null;
+            QuestTb.ReadOnly = false;
+            QuestTb.RightToLeft = RightToLeft.No;
+            QuestTb.SelectedText = "";
+            QuestTb.SelectionLength = 0;
+            QuestTb.SelectionStart = 0;
+            QuestTb.ShortcutsEnabled = true;
+            QuestTb.Size = new Size(268, 48);
+            QuestTb.TabIndex = 6;
+            QuestTb.TabStop = false;
+            QuestTb.Text = "Questions";
+            QuestTb.TextAlign = HorizontalAlignment.Center;
+            QuestTb.TrailingIcon = null;
+            QuestTb.UseSystemPasswordChar = false;
             // 
             // QsnQsnPanel
             // 
@@ -345,6 +382,7 @@
             QsnCandidates.Size = new Size(106, 25);
             QsnCandidates.TabIndex = 4;
             QsnCandidates.Text = "Candidates";
+            QsnCandidates.Click += QsnCandidates_Click;
             // 
             // Qsnsub
             // 
@@ -355,6 +393,7 @@
             Qsnsub.Size = new Size(83, 25);
             Qsnsub.TabIndex = 3;
             Qsnsub.Text = "Subjects";
+            Qsnsub.Click += Qsnsub_Click;
             // 
             // QsnQsn
             // 
@@ -419,6 +458,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox4.TabIndex = 19;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox3
             // 
@@ -429,6 +469,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox3.TabIndex = 19;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox2
             // 
@@ -439,6 +480,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 18;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox1
             // 
@@ -449,6 +491,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 17;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // Questions
             // 
@@ -462,7 +505,7 @@
             Text = "Questions";
             QsnBack1.ResumeLayout(false);
             QsnBack1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewQsn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)QuestionsDGV).EndInit();
             QsnBack2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -482,16 +525,15 @@
         private Label Qsnsub;
         private Label QsnQsn;
         private Panel QsnQsnPanel;
-        private MaterialSkin.Controls.MaterialTextBox2 QsnWrite;
-        private ComboBox SubjrctSelect;
-        private MaterialSkin.Controls.MaterialTextBox2 Opt4;
-        private MaterialSkin.Controls.MaterialTextBox2 Opt2;
-        private MaterialSkin.Controls.MaterialTextBox2 Opt1;
-        private MaterialSkin.Controls.MaterialTextBox2 Opt3;
-        private MaterialSkin.Controls.MaterialButton saveBtn;
-        private MaterialSkin.Controls.MaterialButton resetBtn;
-        private MaterialSkin.Controls.MaterialButton editBtn;
-        private DataGridView dataGridViewQsn;
+        private MaterialSkin.Controls.MaterialTextBox2 QuestTb;
+        private ComboBox SubjectCb;
+        private MaterialSkin.Controls.MaterialTextBox2 Op4Tb;
+        private MaterialSkin.Controls.MaterialTextBox2 Op2Tb;
+        private MaterialSkin.Controls.MaterialTextBox2 Op1Tb;
+        private MaterialSkin.Controls.MaterialTextBox2 Op3Tb;
+        private MaterialSkin.Controls.MaterialButton SaveBtn;
+        private MaterialSkin.Controls.MaterialButton ResetBtn;
+        private MaterialSkin.Controls.MaterialButton EditBtn;
         private Label QsnBankLabel;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
@@ -499,5 +541,7 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox6;
         private PictureBox pictureBox5;
+        private MaterialSkin.Controls.MaterialTextBox2 AnswerTb;
+        private DataGridView QuestionsDGV;
     }
 }

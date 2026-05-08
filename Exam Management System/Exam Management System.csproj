@@ -10,7 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CircularProgressBar" Version="2.8.0.16" />
     <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.1" />
+    <PackageReference Include="Syncfusion.Blazor.ProgressBar" Version="33.2.5" />
   </ItemGroup>
 
   <ItemGroup>

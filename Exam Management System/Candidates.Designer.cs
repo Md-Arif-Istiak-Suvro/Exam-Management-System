@@ -31,20 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Candidates));
             pictureBox1 = new PictureBox();
             QsnBankLabel = new Label();
-            dataGridViewQsn = new DataGridView();
-            resetBtn = new MaterialSkin.Controls.MaterialButton();
-            editBtn = new MaterialSkin.Controls.MaterialButton();
-            saveBtn = new MaterialSkin.Controls.MaterialButton();
-            CanPhn = new MaterialSkin.Controls.MaterialTextBox2();
-            CanAddress = new MaterialSkin.Controls.MaterialTextBox2();
-            CanAge = new MaterialSkin.Controls.MaterialTextBox2();
-            CanPass = new MaterialSkin.Controls.MaterialTextBox2();
-            SubjrctSelect = new ComboBox();
+            CandidatesDGV = new DataGridView();
+            ResetBtn = new MaterialSkin.Controls.MaterialButton();
+            EditBtn = new MaterialSkin.Controls.MaterialButton();
+            SaveBtn = new MaterialSkin.Controls.MaterialButton();
+            PhoneTb = new MaterialSkin.Controls.MaterialTextBox2();
+            AddressTb = new MaterialSkin.Controls.MaterialTextBox2();
+            CAgeTb = new MaterialSkin.Controls.MaterialTextBox2();
+            PasswordTb = new MaterialSkin.Controls.MaterialTextBox2();
             pictureBox6 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
-            CanName = new MaterialSkin.Controls.MaterialTextBox2();
+            CNameTb = new MaterialSkin.Controls.MaterialTextBox2();
             QsnQsnPanel = new Panel();
             QsnCandidates = new Label();
             Qsnsub = new Label();
@@ -54,7 +53,7 @@
             QsnQsn = new Label();
             QsnBack1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewQsn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CandidatesDGV).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -73,6 +72,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 17;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // QsnBankLabel
             // 
@@ -84,205 +84,199 @@
             QsnBankLabel.TabIndex = 16;
             QsnBankLabel.Text = "Candidates List";
             // 
-            // dataGridViewQsn
+            // CandidatesDGV
             // 
-            dataGridViewQsn.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridViewQsn.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewQsn.Location = new Point(12, 381);
-            dataGridViewQsn.Name = "dataGridViewQsn";
-            dataGridViewQsn.RowHeadersWidth = 51;
-            dataGridViewQsn.Size = new Size(1061, 293);
-            dataGridViewQsn.TabIndex = 15;
+            CandidatesDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            CandidatesDGV.BackgroundColor = SystemColors.ButtonHighlight;
+            CandidatesDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            CandidatesDGV.Location = new Point(3, 381);
+            CandidatesDGV.Name = "CandidatesDGV";
+            CandidatesDGV.RowHeadersWidth = 51;
+            CandidatesDGV.Size = new Size(1085, 303);
+            CandidatesDGV.TabIndex = 15;
+            CandidatesDGV.CellContentClick += CandidatesDGV_CellContentClick;
             // 
-            // resetBtn
+            // ResetBtn
             // 
-            resetBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            resetBtn.BackColor = Color.GhostWhite;
-            resetBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            resetBtn.Depth = 0;
-            resetBtn.ForeColor = SystemColors.ButtonHighlight;
-            resetBtn.HighEmphasis = true;
-            resetBtn.Icon = null;
-            resetBtn.Location = new Point(681, 305);
-            resetBtn.Margin = new Padding(4, 6, 4, 6);
-            resetBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            resetBtn.Name = "resetBtn";
-            resetBtn.NoAccentTextColor = Color.Empty;
-            resetBtn.Size = new Size(65, 36);
-            resetBtn.TabIndex = 14;
-            resetBtn.Text = "Reset";
-            resetBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            resetBtn.UseAccentColor = false;
-            resetBtn.UseVisualStyleBackColor = false;
+            ResetBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ResetBtn.BackColor = Color.GhostWhite;
+            ResetBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            ResetBtn.Depth = 0;
+            ResetBtn.ForeColor = SystemColors.ButtonHighlight;
+            ResetBtn.HighEmphasis = true;
+            ResetBtn.Icon = null;
+            ResetBtn.Location = new Point(681, 305);
+            ResetBtn.Margin = new Padding(4, 6, 4, 6);
+            ResetBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            ResetBtn.Name = "ResetBtn";
+            ResetBtn.NoAccentTextColor = Color.Empty;
+            ResetBtn.Size = new Size(65, 36);
+            ResetBtn.TabIndex = 14;
+            ResetBtn.Text = "Reset";
+            ResetBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            ResetBtn.UseAccentColor = false;
+            ResetBtn.UseVisualStyleBackColor = false;
+            ResetBtn.Click += ResetBtn_Click;
             // 
-            // editBtn
+            // EditBtn
             // 
-            editBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            editBtn.BackColor = Color.GhostWhite;
-            editBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            editBtn.Depth = 0;
-            editBtn.ForeColor = SystemColors.ButtonHighlight;
-            editBtn.HighEmphasis = true;
-            editBtn.Icon = null;
-            editBtn.Location = new Point(519, 305);
-            editBtn.Margin = new Padding(4, 6, 4, 6);
-            editBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            editBtn.Name = "editBtn";
-            editBtn.NoAccentTextColor = Color.Empty;
-            editBtn.Size = new Size(64, 36);
-            editBtn.TabIndex = 13;
-            editBtn.Text = "Edit";
-            editBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            editBtn.UseAccentColor = false;
-            editBtn.UseVisualStyleBackColor = false;
+            EditBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            EditBtn.BackColor = Color.GhostWhite;
+            EditBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            EditBtn.Depth = 0;
+            EditBtn.ForeColor = SystemColors.ButtonHighlight;
+            EditBtn.HighEmphasis = true;
+            EditBtn.Icon = null;
+            EditBtn.Location = new Point(519, 305);
+            EditBtn.Margin = new Padding(4, 6, 4, 6);
+            EditBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            EditBtn.Name = "EditBtn";
+            EditBtn.NoAccentTextColor = Color.Empty;
+            EditBtn.Size = new Size(64, 36);
+            EditBtn.TabIndex = 13;
+            EditBtn.Text = "Edit";
+            EditBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            EditBtn.UseAccentColor = false;
+            EditBtn.UseVisualStyleBackColor = false;
+            EditBtn.Click += EditBtn_Click;
             // 
-            // saveBtn
+            // SaveBtn
             // 
-            saveBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            saveBtn.BackColor = Color.GhostWhite;
-            saveBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            saveBtn.Depth = 0;
-            saveBtn.ForeColor = SystemColors.ButtonHighlight;
-            saveBtn.HighEmphasis = true;
-            saveBtn.Icon = null;
-            saveBtn.Location = new Point(365, 305);
-            saveBtn.Margin = new Padding(4, 6, 4, 6);
-            saveBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            saveBtn.Name = "saveBtn";
-            saveBtn.NoAccentTextColor = Color.Empty;
-            saveBtn.Size = new Size(64, 36);
-            saveBtn.TabIndex = 12;
-            saveBtn.Text = "Save";
-            saveBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            saveBtn.UseAccentColor = false;
-            saveBtn.UseVisualStyleBackColor = false;
+            SaveBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            SaveBtn.BackColor = Color.GhostWhite;
+            SaveBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            SaveBtn.Depth = 0;
+            SaveBtn.ForeColor = SystemColors.ButtonHighlight;
+            SaveBtn.HighEmphasis = true;
+            SaveBtn.Icon = null;
+            SaveBtn.Location = new Point(365, 305);
+            SaveBtn.Margin = new Padding(4, 6, 4, 6);
+            SaveBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            SaveBtn.Name = "SaveBtn";
+            SaveBtn.NoAccentTextColor = Color.Empty;
+            SaveBtn.Size = new Size(64, 36);
+            SaveBtn.TabIndex = 12;
+            SaveBtn.Text = "Save";
+            SaveBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            SaveBtn.UseAccentColor = false;
+            SaveBtn.UseVisualStyleBackColor = false;
+            SaveBtn.Click += SaveBtn_Click;
             // 
-            // CanPhn
+            // PhoneTb
             // 
-            CanPhn.AnimateReadOnly = false;
-            CanPhn.BackgroundImageLayout = ImageLayout.None;
-            CanPhn.CharacterCasing = CharacterCasing.Normal;
-            CanPhn.Depth = 0;
-            CanPhn.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CanPhn.HideSelection = true;
-            CanPhn.LeadingIcon = null;
-            CanPhn.Location = new Point(607, 224);
-            CanPhn.MaxLength = 32767;
-            CanPhn.MouseState = MaterialSkin.MouseState.OUT;
-            CanPhn.Name = "CanPhn";
-            CanPhn.PasswordChar = '\0';
-            CanPhn.PrefixSuffixText = null;
-            CanPhn.ReadOnly = false;
-            CanPhn.RightToLeft = RightToLeft.No;
-            CanPhn.SelectedText = "";
-            CanPhn.SelectionLength = 0;
-            CanPhn.SelectionStart = 0;
-            CanPhn.ShortcutsEnabled = true;
-            CanPhn.Size = new Size(268, 48);
-            CanPhn.TabIndex = 11;
-            CanPhn.TabStop = false;
-            CanPhn.Text = "Phone";
-            CanPhn.TextAlign = HorizontalAlignment.Center;
-            CanPhn.TrailingIcon = null;
-            CanPhn.UseSystemPasswordChar = false;
+            PhoneTb.AnimateReadOnly = false;
+            PhoneTb.BackgroundImageLayout = ImageLayout.None;
+            PhoneTb.CharacterCasing = CharacterCasing.Normal;
+            PhoneTb.Depth = 0;
+            PhoneTb.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PhoneTb.HideSelection = true;
+            PhoneTb.LeadingIcon = null;
+            PhoneTb.Location = new Point(607, 224);
+            PhoneTb.MaxLength = 32767;
+            PhoneTb.MouseState = MaterialSkin.MouseState.OUT;
+            PhoneTb.Name = "PhoneTb";
+            PhoneTb.PasswordChar = '\0';
+            PhoneTb.PrefixSuffixText = null;
+            PhoneTb.ReadOnly = false;
+            PhoneTb.RightToLeft = RightToLeft.No;
+            PhoneTb.SelectedText = "";
+            PhoneTb.SelectionLength = 0;
+            PhoneTb.SelectionStart = 0;
+            PhoneTb.ShortcutsEnabled = true;
+            PhoneTb.Size = new Size(268, 48);
+            PhoneTb.TabIndex = 11;
+            PhoneTb.TabStop = false;
+            PhoneTb.Text = "Phone";
+            PhoneTb.TextAlign = HorizontalAlignment.Center;
+            PhoneTb.TrailingIcon = null;
+            PhoneTb.UseSystemPasswordChar = false;
             // 
-            // CanAddress
+            // AddressTb
             // 
-            CanAddress.AnimateReadOnly = false;
-            CanAddress.BackgroundImageLayout = ImageLayout.None;
-            CanAddress.CharacterCasing = CharacterCasing.Normal;
-            CanAddress.Depth = 0;
-            CanAddress.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CanAddress.HideSelection = true;
-            CanAddress.LeadingIcon = null;
-            CanAddress.Location = new Point(781, 129);
-            CanAddress.MaxLength = 32767;
-            CanAddress.MouseState = MaterialSkin.MouseState.OUT;
-            CanAddress.Name = "CanAddress";
-            CanAddress.PasswordChar = '\0';
-            CanAddress.PrefixSuffixText = null;
-            CanAddress.ReadOnly = false;
-            CanAddress.RightToLeft = RightToLeft.No;
-            CanAddress.SelectedText = "";
-            CanAddress.SelectionLength = 0;
-            CanAddress.SelectionStart = 0;
-            CanAddress.ShortcutsEnabled = true;
-            CanAddress.Size = new Size(268, 48);
-            CanAddress.TabIndex = 10;
-            CanAddress.TabStop = false;
-            CanAddress.Text = "Address";
-            CanAddress.TextAlign = HorizontalAlignment.Center;
-            CanAddress.TrailingIcon = null;
-            CanAddress.UseSystemPasswordChar = false;
+            AddressTb.AnimateReadOnly = false;
+            AddressTb.BackgroundImageLayout = ImageLayout.None;
+            AddressTb.CharacterCasing = CharacterCasing.Normal;
+            AddressTb.Depth = 0;
+            AddressTb.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AddressTb.HideSelection = true;
+            AddressTb.LeadingIcon = null;
+            AddressTb.Location = new Point(661, 129);
+            AddressTb.MaxLength = 32767;
+            AddressTb.MouseState = MaterialSkin.MouseState.OUT;
+            AddressTb.Name = "AddressTb";
+            AddressTb.PasswordChar = '\0';
+            AddressTb.PrefixSuffixText = null;
+            AddressTb.ReadOnly = false;
+            AddressTb.RightToLeft = RightToLeft.No;
+            AddressTb.SelectedText = "";
+            AddressTb.SelectionLength = 0;
+            AddressTb.SelectionStart = 0;
+            AddressTb.ShortcutsEnabled = true;
+            AddressTb.Size = new Size(393, 48);
+            AddressTb.TabIndex = 10;
+            AddressTb.TabStop = false;
+            AddressTb.Text = "Address";
+            AddressTb.TextAlign = HorizontalAlignment.Center;
+            AddressTb.TrailingIcon = null;
+            AddressTb.UseSystemPasswordChar = false;
             // 
-            // CanAge
+            // CAgeTb
             // 
-            CanAge.AnimateReadOnly = false;
-            CanAge.BackgroundImageLayout = ImageLayout.None;
-            CanAge.CharacterCasing = CharacterCasing.Normal;
-            CanAge.Depth = 0;
-            CanAge.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CanAge.HideSelection = true;
-            CanAge.LeadingIcon = null;
-            CanAge.Location = new Point(421, 129);
-            CanAge.MaxLength = 32767;
-            CanAge.MouseState = MaterialSkin.MouseState.OUT;
-            CanAge.Name = "CanAge";
-            CanAge.PasswordChar = '\0';
-            CanAge.PrefixSuffixText = null;
-            CanAge.ReadOnly = false;
-            CanAge.RightToLeft = RightToLeft.No;
-            CanAge.SelectedText = "";
-            CanAge.SelectionLength = 0;
-            CanAge.SelectionStart = 0;
-            CanAge.ShortcutsEnabled = true;
-            CanAge.Size = new Size(270, 48);
-            CanAge.TabIndex = 9;
-            CanAge.TabStop = false;
-            CanAge.Text = "Age";
-            CanAge.TextAlign = HorizontalAlignment.Center;
-            CanAge.TrailingIcon = null;
-            CanAge.UseSystemPasswordChar = false;
+            CAgeTb.AnimateReadOnly = false;
+            CAgeTb.BackgroundImageLayout = ImageLayout.None;
+            CAgeTb.CharacterCasing = CharacterCasing.Normal;
+            CAgeTb.Depth = 0;
+            CAgeTb.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CAgeTb.HideSelection = true;
+            CAgeTb.LeadingIcon = null;
+            CAgeTb.Location = new Point(471, 129);
+            CAgeTb.MaxLength = 32767;
+            CAgeTb.MouseState = MaterialSkin.MouseState.OUT;
+            CAgeTb.Name = "CAgeTb";
+            CAgeTb.PasswordChar = '\0';
+            CAgeTb.PrefixSuffixText = null;
+            CAgeTb.ReadOnly = false;
+            CAgeTb.RightToLeft = RightToLeft.No;
+            CAgeTb.SelectedText = "";
+            CAgeTb.SelectionLength = 0;
+            CAgeTb.SelectionStart = 0;
+            CAgeTb.ShortcutsEnabled = true;
+            CAgeTb.Size = new Size(145, 48);
+            CAgeTb.TabIndex = 9;
+            CAgeTb.TabStop = false;
+            CAgeTb.Text = "Age";
+            CAgeTb.TextAlign = HorizontalAlignment.Center;
+            CAgeTb.TrailingIcon = null;
+            CAgeTb.UseSystemPasswordChar = false;
             // 
-            // CanPass
+            // PasswordTb
             // 
-            CanPass.AnimateReadOnly = false;
-            CanPass.BackgroundImageLayout = ImageLayout.None;
-            CanPass.CharacterCasing = CharacterCasing.Normal;
-            CanPass.Depth = 0;
-            CanPass.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CanPass.HideSelection = true;
-            CanPass.LeadingIcon = null;
-            CanPass.Location = new Point(227, 224);
-            CanPass.MaxLength = 32767;
-            CanPass.MouseState = MaterialSkin.MouseState.OUT;
-            CanPass.Name = "CanPass";
-            CanPass.PasswordChar = '\0';
-            CanPass.PrefixSuffixText = null;
-            CanPass.ReadOnly = false;
-            CanPass.RightToLeft = RightToLeft.No;
-            CanPass.SelectedText = "";
-            CanPass.SelectionLength = 0;
-            CanPass.SelectionStart = 0;
-            CanPass.ShortcutsEnabled = true;
-            CanPass.Size = new Size(270, 48);
-            CanPass.TabIndex = 8;
-            CanPass.TabStop = false;
-            CanPass.Text = "Password";
-            CanPass.TextAlign = HorizontalAlignment.Center;
-            CanPass.TrailingIcon = null;
-            CanPass.UseSystemPasswordChar = false;
-            // 
-            // SubjrctSelect
-            // 
-            SubjrctSelect.Font = new Font("Segoe UI Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SubjrctSelect.ForeColor = SystemColors.ControlText;
-            SubjrctSelect.FormattingEnabled = true;
-            SubjrctSelect.Location = new Point(845, 40);
-            SubjrctSelect.Name = "SubjrctSelect";
-            SubjrctSelect.Size = new Size(154, 36);
-            SubjrctSelect.TabIndex = 7;
-            SubjrctSelect.Text = "Subject";
+            PasswordTb.AnimateReadOnly = false;
+            PasswordTb.BackgroundImageLayout = ImageLayout.None;
+            PasswordTb.CharacterCasing = CharacterCasing.Normal;
+            PasswordTb.Depth = 0;
+            PasswordTb.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PasswordTb.HideSelection = true;
+            PasswordTb.LeadingIcon = null;
+            PasswordTb.Location = new Point(227, 224);
+            PasswordTb.MaxLength = 32767;
+            PasswordTb.MouseState = MaterialSkin.MouseState.OUT;
+            PasswordTb.Name = "PasswordTb";
+            PasswordTb.PasswordChar = '\0';
+            PasswordTb.PrefixSuffixText = null;
+            PasswordTb.ReadOnly = false;
+            PasswordTb.RightToLeft = RightToLeft.No;
+            PasswordTb.SelectedText = "";
+            PasswordTb.SelectionLength = 0;
+            PasswordTb.SelectionStart = 0;
+            PasswordTb.ShortcutsEnabled = true;
+            PasswordTb.Size = new Size(270, 48);
+            PasswordTb.TabIndex = 8;
+            PasswordTb.TabStop = false;
+            PasswordTb.Text = "Password";
+            PasswordTb.TextAlign = HorizontalAlignment.Center;
+            PasswordTb.TrailingIcon = null;
+            PasswordTb.UseSystemPasswordChar = false;
             // 
             // pictureBox6
             // 
@@ -323,35 +317,36 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox3.TabIndex = 19;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
-            // CanName
+            // CNameTb
             // 
-            CanName.AnimateReadOnly = false;
-            CanName.BackgroundImageLayout = ImageLayout.None;
-            CanName.CharacterCasing = CharacterCasing.Normal;
-            CanName.Depth = 0;
-            CanName.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CanName.HideSelection = true;
-            CanName.LeadingIcon = null;
-            CanName.Location = new Point(74, 129);
-            CanName.MaxLength = 32767;
-            CanName.MouseState = MaterialSkin.MouseState.OUT;
-            CanName.Name = "CanName";
-            CanName.PasswordChar = '\0';
-            CanName.PrefixSuffixText = null;
-            CanName.ReadOnly = false;
-            CanName.RightToLeft = RightToLeft.No;
-            CanName.SelectedText = "";
-            CanName.SelectionLength = 0;
-            CanName.SelectionStart = 0;
-            CanName.ShortcutsEnabled = true;
-            CanName.Size = new Size(268, 48);
-            CanName.TabIndex = 6;
-            CanName.TabStop = false;
-            CanName.Text = "Name";
-            CanName.TextAlign = HorizontalAlignment.Center;
-            CanName.TrailingIcon = null;
-            CanName.UseSystemPasswordChar = false;
+            CNameTb.AnimateReadOnly = false;
+            CNameTb.BackgroundImageLayout = ImageLayout.None;
+            CNameTb.CharacterCasing = CharacterCasing.Normal;
+            CNameTb.Depth = 0;
+            CNameTb.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CNameTb.HideSelection = true;
+            CNameTb.LeadingIcon = null;
+            CNameTb.Location = new Point(38, 129);
+            CNameTb.MaxLength = 32767;
+            CNameTb.MouseState = MaterialSkin.MouseState.OUT;
+            CNameTb.Name = "CNameTb";
+            CNameTb.PasswordChar = '\0';
+            CNameTb.PrefixSuffixText = null;
+            CNameTb.ReadOnly = false;
+            CNameTb.RightToLeft = RightToLeft.No;
+            CNameTb.SelectedText = "";
+            CNameTb.SelectionLength = 0;
+            CNameTb.SelectionStart = 0;
+            CNameTb.ShortcutsEnabled = true;
+            CNameTb.Size = new Size(391, 48);
+            CNameTb.TabIndex = 6;
+            CNameTb.TabStop = false;
+            CNameTb.Text = "Name";
+            CNameTb.TextAlign = HorizontalAlignment.Center;
+            CNameTb.TrailingIcon = null;
+            CNameTb.UseSystemPasswordChar = false;
             // 
             // QsnQsnPanel
             // 
@@ -380,6 +375,7 @@
             Qsnsub.Size = new Size(83, 25);
             Qsnsub.TabIndex = 3;
             Qsnsub.Text = "Subjects";
+            Qsnsub.Click += Qsnsub_Click;
             // 
             // QsnName1
             // 
@@ -414,6 +410,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 18;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // QsnQsn
             // 
@@ -429,16 +426,15 @@
             // 
             QsnBack1.BackColor = Color.BlueViolet;
             QsnBack1.Controls.Add(QsnBankLabel);
-            QsnBack1.Controls.Add(dataGridViewQsn);
-            QsnBack1.Controls.Add(resetBtn);
-            QsnBack1.Controls.Add(editBtn);
-            QsnBack1.Controls.Add(saveBtn);
-            QsnBack1.Controls.Add(CanPhn);
-            QsnBack1.Controls.Add(CanAddress);
-            QsnBack1.Controls.Add(CanAge);
-            QsnBack1.Controls.Add(CanPass);
-            QsnBack1.Controls.Add(SubjrctSelect);
-            QsnBack1.Controls.Add(CanName);
+            QsnBack1.Controls.Add(CandidatesDGV);
+            QsnBack1.Controls.Add(ResetBtn);
+            QsnBack1.Controls.Add(EditBtn);
+            QsnBack1.Controls.Add(SaveBtn);
+            QsnBack1.Controls.Add(PhoneTb);
+            QsnBack1.Controls.Add(AddressTb);
+            QsnBack1.Controls.Add(CAgeTb);
+            QsnBack1.Controls.Add(PasswordTb);
+            QsnBack1.Controls.Add(CNameTb);
             QsnBack1.Controls.Add(QsnQsnPanel);
             QsnBack1.Controls.Add(QsnCandidates);
             QsnBack1.Controls.Add(Qsnsub);
@@ -461,7 +457,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Candidates";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewQsn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CandidatesDGV).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -477,20 +473,19 @@
 
         private PictureBox pictureBox1;
         private Label QsnBankLabel;
-        private DataGridView dataGridViewQsn;
-        private MaterialSkin.Controls.MaterialButton resetBtn;
-        private MaterialSkin.Controls.MaterialButton editBtn;
-        private MaterialSkin.Controls.MaterialButton saveBtn;
-        private MaterialSkin.Controls.MaterialTextBox2 CanPhn;
-        private MaterialSkin.Controls.MaterialTextBox2 CanAddress;
-        private MaterialSkin.Controls.MaterialTextBox2 CanAge;
-        private MaterialSkin.Controls.MaterialTextBox2 CanPass;
-        private ComboBox SubjrctSelect;
+        private DataGridView CandidatesDGV;
+        private MaterialSkin.Controls.MaterialButton ResetBtn;
+        private MaterialSkin.Controls.MaterialButton EditBtn;
+        private MaterialSkin.Controls.MaterialButton SaveBtn;
+        private MaterialSkin.Controls.MaterialTextBox2 PhoneTb;
+        private MaterialSkin.Controls.MaterialTextBox2 AddressTb;
+        private MaterialSkin.Controls.MaterialTextBox2 CAgeTb;
+        private MaterialSkin.Controls.MaterialTextBox2 PasswordTb;
         private PictureBox pictureBox6;
         private PictureBox pictureBox5;
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
-        private MaterialSkin.Controls.MaterialTextBox2 CanName;
+        private MaterialSkin.Controls.MaterialTextBox2 CNameTb;
         private Panel QsnQsnPanel;
         private Label QsnCandidates;
         private Label Qsnsub;

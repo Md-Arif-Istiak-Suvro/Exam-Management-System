@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exams));
-            submitBtn = new MaterialSkin.Controls.MaterialButton();
+            SubmitBtn = new MaterialSkin.Controls.MaterialButton();
             QsnQsnPanel = new Panel();
             QsnCandidates = new Label();
             pictureBox3 = new PictureBox();
@@ -39,61 +40,66 @@
             pictureBox1 = new PictureBox();
             QsnName1 = new Label();
             QsnBack2 = new Panel();
+            CnameLbl = new Label();
             pictureBox4 = new PictureBox();
             QsnBack1 = new Panel();
-            timeLabel = new Label();
-            groupBox8 = new GroupBox();
-            radioButton29 = new RadioButton();
-            radioButton30 = new RadioButton();
-            radioButton31 = new RadioButton();
-            radioButton32 = new RadioButton();
-            groupBox9 = new GroupBox();
-            radioButton33 = new RadioButton();
-            radioButton34 = new RadioButton();
-            radioButton35 = new RadioButton();
-            radioButton36 = new RadioButton();
-            groupBox4 = new GroupBox();
-            radioButton13 = new RadioButton();
-            radioButton14 = new RadioButton();
-            radioButton15 = new RadioButton();
-            radioButton16 = new RadioButton();
-            groupBox5 = new GroupBox();
-            radioButton17 = new RadioButton();
-            radioButton18 = new RadioButton();
-            radioButton19 = new RadioButton();
-            radioButton20 = new RadioButton();
-            groupBox6 = new GroupBox();
-            radioButton21 = new RadioButton();
-            radioButton22 = new RadioButton();
-            radioButton23 = new RadioButton();
-            radioButton24 = new RadioButton();
-            groupBox7 = new GroupBox();
-            radioButton25 = new RadioButton();
-            radioButton26 = new RadioButton();
-            radioButton27 = new RadioButton();
-            radioButton28 = new RadioButton();
-            groupBox3 = new GroupBox();
-            radioButton9 = new RadioButton();
-            radioButton10 = new RadioButton();
-            radioButton11 = new RadioButton();
-            radioButton12 = new RadioButton();
-            groupBox2 = new GroupBox();
-            radioButton5 = new RadioButton();
-            radioButton6 = new RadioButton();
-            radioButton7 = new RadioButton();
-            radioButton8 = new RadioButton();
-            groupBox1 = new GroupBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
-            Qsn1 = new GroupBox();
-            optn2 = new RadioButton();
-            optn4 = new RadioButton();
-            optn3 = new RadioButton();
-            optn1 = new RadioButton();
-            SubjectLabel = new Label();
+            QTimep = new DateTimePicker();
+            QDateP = new DateTimePicker();
             panel1 = new Panel();
+            TimeLbl = new Label();
+            TimingBar = new ProgressBar();
+            SubjectLbl = new Label();
+            Q10 = new GroupBox();
+            Q1002 = new RadioButton();
+            Q1004 = new RadioButton();
+            Q1003 = new RadioButton();
+            Q1001 = new RadioButton();
+            Q9 = new GroupBox();
+            Q902 = new RadioButton();
+            Q904 = new RadioButton();
+            Q903 = new RadioButton();
+            Q901 = new RadioButton();
+            Q8 = new GroupBox();
+            Q802 = new RadioButton();
+            Q804 = new RadioButton();
+            Q803 = new RadioButton();
+            Q801 = new RadioButton();
+            Q7 = new GroupBox();
+            Q702 = new RadioButton();
+            Q704 = new RadioButton();
+            Q703 = new RadioButton();
+            Q701 = new RadioButton();
+            Q6 = new GroupBox();
+            Q602 = new RadioButton();
+            Q604 = new RadioButton();
+            Q603 = new RadioButton();
+            Q601 = new RadioButton();
+            Q5 = new GroupBox();
+            Q502 = new RadioButton();
+            Q504 = new RadioButton();
+            Q503 = new RadioButton();
+            Q501 = new RadioButton();
+            Q4 = new GroupBox();
+            Q402 = new RadioButton();
+            Q404 = new RadioButton();
+            Q403 = new RadioButton();
+            Q401 = new RadioButton();
+            Q3 = new GroupBox();
+            Q302 = new RadioButton();
+            Q304 = new RadioButton();
+            Q303 = new RadioButton();
+            Q301 = new RadioButton();
+            Q2 = new GroupBox();
+            Q202 = new RadioButton();
+            Q204 = new RadioButton();
+            Q203 = new RadioButton();
+            Q201 = new RadioButton();
+            Q1 = new GroupBox();
+            Q102 = new RadioButton();
+            Q104 = new RadioButton();
+            Q103 = new RadioButton();
+            Q101 = new RadioButton();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -102,39 +108,40 @@
             QsnBack2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             QsnBack1.SuspendLayout();
-            groupBox8.SuspendLayout();
-            groupBox9.SuspendLayout();
-            groupBox4.SuspendLayout();
-            groupBox5.SuspendLayout();
-            groupBox6.SuspendLayout();
-            groupBox7.SuspendLayout();
-            groupBox3.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox1.SuspendLayout();
-            Qsn1.SuspendLayout();
             panel1.SuspendLayout();
+            Q10.SuspendLayout();
+            Q9.SuspendLayout();
+            Q8.SuspendLayout();
+            Q7.SuspendLayout();
+            Q6.SuspendLayout();
+            Q5.SuspendLayout();
+            Q4.SuspendLayout();
+            Q3.SuspendLayout();
+            Q2.SuspendLayout();
+            Q1.SuspendLayout();
             SuspendLayout();
             // 
-            // submitBtn
+            // SubmitBtn
             // 
-            submitBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            submitBtn.BackColor = Color.GhostWhite;
-            submitBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            submitBtn.Depth = 0;
-            submitBtn.ForeColor = SystemColors.ButtonHighlight;
-            submitBtn.HighEmphasis = true;
-            submitBtn.Icon = null;
-            submitBtn.Location = new Point(495, 630);
-            submitBtn.Margin = new Padding(4, 6, 4, 6);
-            submitBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            submitBtn.Name = "submitBtn";
-            submitBtn.NoAccentTextColor = Color.Empty;
-            submitBtn.Size = new Size(75, 36);
-            submitBtn.TabIndex = 13;
-            submitBtn.Text = "Submit";
-            submitBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            submitBtn.UseAccentColor = false;
-            submitBtn.UseVisualStyleBackColor = false;
+            SubmitBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            SubmitBtn.BackColor = Color.GhostWhite;
+            SubmitBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            SubmitBtn.Depth = 0;
+            SubmitBtn.ForeColor = SystemColors.ButtonHighlight;
+            SubmitBtn.HighEmphasis = true;
+            SubmitBtn.Icon = null;
+            SubmitBtn.Location = new Point(495, 630);
+            SubmitBtn.Margin = new Padding(4, 6, 4, 6);
+            SubmitBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            SubmitBtn.Name = "SubmitBtn";
+            SubmitBtn.NoAccentTextColor = Color.Empty;
+            SubmitBtn.Size = new Size(75, 36);
+            SubmitBtn.TabIndex = 13;
+            SubmitBtn.Text = "Submit";
+            SubmitBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            SubmitBtn.UseAccentColor = false;
+            SubmitBtn.UseVisualStyleBackColor = false;
+            SubmitBtn.Click += SubmitBtn_Click;
             // 
             // QsnQsnPanel
             // 
@@ -150,9 +157,9 @@
             QsnCandidates.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             QsnCandidates.Location = new Point(505, 34);
             QsnCandidates.Name = "QsnCandidates";
-            QsnCandidates.Size = new Size(106, 25);
+            QsnCandidates.Size = new Size(105, 25);
             QsnCandidates.TabIndex = 4;
-            QsnCandidates.Text = "Candidates";
+            QsnCandidates.Text = "AIUB QUIZ";
             // 
             // pictureBox3
             // 
@@ -217,6 +224,7 @@
             // QsnBack2
             // 
             QsnBack2.BackColor = Color.Black;
+            QsnBack2.Controls.Add(CnameLbl);
             QsnBack2.Controls.Add(pictureBox6);
             QsnBack2.Controls.Add(pictureBox5);
             QsnBack2.Controls.Add(pictureBox4);
@@ -227,6 +235,17 @@
             QsnBack2.Name = "QsnBack2";
             QsnBack2.Size = new Size(63, 687);
             QsnBack2.TabIndex = 0;
+            // 
+            // CnameLbl
+            // 
+            CnameLbl.AutoSize = true;
+            CnameLbl.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CnameLbl.ForeColor = SystemColors.ButtonFace;
+            CnameLbl.Location = new Point(0, 46);
+            CnameLbl.Name = "CnameLbl";
+            CnameLbl.Size = new Size(60, 20);
+            CnameLbl.TabIndex = 27;
+            CnameLbl.Text = "Subject";
             // 
             // pictureBox4
             // 
@@ -241,19 +260,21 @@
             // QsnBack1
             // 
             QsnBack1.BackColor = Color.BlueViolet;
+            QsnBack1.Controls.Add(QTimep);
+            QsnBack1.Controls.Add(QDateP);
             QsnBack1.Controls.Add(panel1);
-            QsnBack1.Controls.Add(SubjectLabel);
-            QsnBack1.Controls.Add(groupBox8);
-            QsnBack1.Controls.Add(groupBox9);
-            QsnBack1.Controls.Add(groupBox4);
-            QsnBack1.Controls.Add(groupBox5);
-            QsnBack1.Controls.Add(groupBox6);
-            QsnBack1.Controls.Add(groupBox7);
-            QsnBack1.Controls.Add(groupBox3);
-            QsnBack1.Controls.Add(groupBox2);
-            QsnBack1.Controls.Add(groupBox1);
-            QsnBack1.Controls.Add(Qsn1);
-            QsnBack1.Controls.Add(submitBtn);
+            QsnBack1.Controls.Add(SubjectLbl);
+            QsnBack1.Controls.Add(Q10);
+            QsnBack1.Controls.Add(Q9);
+            QsnBack1.Controls.Add(Q8);
+            QsnBack1.Controls.Add(Q7);
+            QsnBack1.Controls.Add(Q6);
+            QsnBack1.Controls.Add(Q5);
+            QsnBack1.Controls.Add(Q4);
+            QsnBack1.Controls.Add(Q3);
+            QsnBack1.Controls.Add(Q2);
+            QsnBack1.Controls.Add(Q1);
+            QsnBack1.Controls.Add(SubmitBtn);
             QsnBack1.Controls.Add(QsnQsnPanel);
             QsnBack1.Controls.Add(QsnCandidates);
             QsnBack1.Controls.Add(QsnName1);
@@ -263,653 +284,686 @@
             QsnBack1.Size = new Size(1151, 687);
             QsnBack1.TabIndex = 2;
             // 
-            // timeLabel
-            // 
-            timeLabel.AutoSize = true;
-            timeLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            timeLabel.Location = new Point(51, 20);
-            timeLabel.Name = "timeLabel";
-            timeLabel.Size = new Size(71, 25);
-            timeLabel.TabIndex = 24;
-            timeLabel.Text = "Timing";
-            // 
-            // groupBox8
-            // 
-            groupBox8.Controls.Add(radioButton29);
-            groupBox8.Controls.Add(radioButton30);
-            groupBox8.Controls.Add(radioButton31);
-            groupBox8.Controls.Add(radioButton32);
-            groupBox8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox8.Location = new Point(545, 455);
-            groupBox8.Name = "groupBox8";
-            groupBox8.Size = new Size(250, 166);
-            groupBox8.TabIndex = 23;
-            groupBox8.TabStop = false;
-            groupBox8.Text = "Question1";
-            // 
-            // radioButton29
-            // 
-            radioButton29.AutoSize = true;
-            radioButton29.Font = new Font("Segoe UI Light", 9F);
-            radioButton29.Location = new Point(31, 71);
-            radioButton29.Name = "radioButton29";
-            radioButton29.Size = new Size(80, 24);
-            radioButton29.TabIndex = 4;
-            radioButton29.TabStop = true;
-            radioButton29.Text = "Option2";
-            radioButton29.UseVisualStyleBackColor = true;
-            // 
-            // radioButton30
-            // 
-            radioButton30.AutoSize = true;
-            radioButton30.Font = new Font("Segoe UI Light", 9F);
-            radioButton30.Location = new Point(31, 131);
-            radioButton30.Name = "radioButton30";
-            radioButton30.Size = new Size(80, 24);
-            radioButton30.TabIndex = 3;
-            radioButton30.TabStop = true;
-            radioButton30.Text = "Option4";
-            radioButton30.UseVisualStyleBackColor = true;
-            // 
-            // radioButton31
-            // 
-            radioButton31.AutoSize = true;
-            radioButton31.Font = new Font("Segoe UI Light", 9F);
-            radioButton31.Location = new Point(31, 101);
-            radioButton31.Name = "radioButton31";
-            radioButton31.Size = new Size(80, 24);
-            radioButton31.TabIndex = 2;
-            radioButton31.TabStop = true;
-            radioButton31.Text = "Option3";
-            radioButton31.UseVisualStyleBackColor = true;
-            // 
-            // radioButton32
-            // 
-            radioButton32.AutoSize = true;
-            radioButton32.Font = new Font("Segoe UI Light", 9F);
-            radioButton32.Location = new Point(31, 41);
-            radioButton32.Name = "radioButton32";
-            radioButton32.Size = new Size(77, 24);
-            radioButton32.TabIndex = 0;
-            radioButton32.TabStop = true;
-            radioButton32.Text = "Option1";
-            radioButton32.UseVisualStyleBackColor = true;
-            // 
-            // groupBox9
-            // 
-            groupBox9.Controls.Add(radioButton33);
-            groupBox9.Controls.Add(radioButton34);
-            groupBox9.Controls.Add(radioButton35);
-            groupBox9.Controls.Add(radioButton36);
-            groupBox9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox9.Location = new Point(279, 455);
-            groupBox9.Name = "groupBox9";
-            groupBox9.Size = new Size(250, 166);
-            groupBox9.TabIndex = 22;
-            groupBox9.TabStop = false;
-            groupBox9.Text = "Question1";
-            // 
-            // radioButton33
-            // 
-            radioButton33.AutoSize = true;
-            radioButton33.Font = new Font("Segoe UI Light", 9F);
-            radioButton33.Location = new Point(31, 71);
-            radioButton33.Name = "radioButton33";
-            radioButton33.Size = new Size(80, 24);
-            radioButton33.TabIndex = 4;
-            radioButton33.TabStop = true;
-            radioButton33.Text = "Option2";
-            radioButton33.UseVisualStyleBackColor = true;
-            // 
-            // radioButton34
-            // 
-            radioButton34.AutoSize = true;
-            radioButton34.Font = new Font("Segoe UI Light", 9F);
-            radioButton34.Location = new Point(31, 131);
-            radioButton34.Name = "radioButton34";
-            radioButton34.Size = new Size(80, 24);
-            radioButton34.TabIndex = 3;
-            radioButton34.TabStop = true;
-            radioButton34.Text = "Option4";
-            radioButton34.UseVisualStyleBackColor = true;
-            // 
-            // radioButton35
-            // 
-            radioButton35.AutoSize = true;
-            radioButton35.Font = new Font("Segoe UI Light", 9F);
-            radioButton35.Location = new Point(31, 101);
-            radioButton35.Name = "radioButton35";
-            radioButton35.Size = new Size(80, 24);
-            radioButton35.TabIndex = 2;
-            radioButton35.TabStop = true;
-            radioButton35.Text = "Option3";
-            radioButton35.UseVisualStyleBackColor = true;
-            // 
-            // radioButton36
-            // 
-            radioButton36.AutoSize = true;
-            radioButton36.Font = new Font("Segoe UI Light", 9F);
-            radioButton36.Location = new Point(31, 41);
-            radioButton36.Name = "radioButton36";
-            radioButton36.Size = new Size(77, 24);
-            radioButton36.TabIndex = 0;
-            radioButton36.TabStop = true;
-            radioButton36.Text = "Option1";
-            radioButton36.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            groupBox4.Controls.Add(radioButton13);
-            groupBox4.Controls.Add(radioButton14);
-            groupBox4.Controls.Add(radioButton15);
-            groupBox4.Controls.Add(radioButton16);
-            groupBox4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox4.Location = new Point(810, 283);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(250, 166);
-            groupBox4.TabIndex = 21;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Question1";
-            // 
-            // radioButton13
-            // 
-            radioButton13.AutoSize = true;
-            radioButton13.Font = new Font("Segoe UI Light", 9F);
-            radioButton13.Location = new Point(31, 71);
-            radioButton13.Name = "radioButton13";
-            radioButton13.Size = new Size(80, 24);
-            radioButton13.TabIndex = 4;
-            radioButton13.TabStop = true;
-            radioButton13.Text = "Option2";
-            radioButton13.UseVisualStyleBackColor = true;
-            // 
-            // radioButton14
-            // 
-            radioButton14.AutoSize = true;
-            radioButton14.Font = new Font("Segoe UI Light", 9F);
-            radioButton14.Location = new Point(31, 131);
-            radioButton14.Name = "radioButton14";
-            radioButton14.Size = new Size(80, 24);
-            radioButton14.TabIndex = 3;
-            radioButton14.TabStop = true;
-            radioButton14.Text = "Option4";
-            radioButton14.UseVisualStyleBackColor = true;
-            // 
-            // radioButton15
-            // 
-            radioButton15.AutoSize = true;
-            radioButton15.Font = new Font("Segoe UI Light", 9F);
-            radioButton15.Location = new Point(31, 101);
-            radioButton15.Name = "radioButton15";
-            radioButton15.Size = new Size(80, 24);
-            radioButton15.TabIndex = 2;
-            radioButton15.TabStop = true;
-            radioButton15.Text = "Option3";
-            radioButton15.UseVisualStyleBackColor = true;
-            // 
-            // radioButton16
-            // 
-            radioButton16.AutoSize = true;
-            radioButton16.Font = new Font("Segoe UI Light", 9F);
-            radioButton16.Location = new Point(31, 41);
-            radioButton16.Name = "radioButton16";
-            radioButton16.Size = new Size(77, 24);
-            radioButton16.TabIndex = 0;
-            radioButton16.TabStop = true;
-            radioButton16.Text = "Option1";
-            radioButton16.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            groupBox5.Controls.Add(radioButton17);
-            groupBox5.Controls.Add(radioButton18);
-            groupBox5.Controls.Add(radioButton19);
-            groupBox5.Controls.Add(radioButton20);
-            groupBox5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox5.Location = new Point(545, 283);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(250, 166);
-            groupBox5.TabIndex = 20;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "Question1";
-            // 
-            // radioButton17
-            // 
-            radioButton17.AutoSize = true;
-            radioButton17.Font = new Font("Segoe UI Light", 9F);
-            radioButton17.Location = new Point(31, 71);
-            radioButton17.Name = "radioButton17";
-            radioButton17.Size = new Size(80, 24);
-            radioButton17.TabIndex = 4;
-            radioButton17.TabStop = true;
-            radioButton17.Text = "Option2";
-            radioButton17.UseVisualStyleBackColor = true;
-            // 
-            // radioButton18
-            // 
-            radioButton18.AutoSize = true;
-            radioButton18.Font = new Font("Segoe UI Light", 9F);
-            radioButton18.Location = new Point(31, 131);
-            radioButton18.Name = "radioButton18";
-            radioButton18.Size = new Size(80, 24);
-            radioButton18.TabIndex = 3;
-            radioButton18.TabStop = true;
-            radioButton18.Text = "Option4";
-            radioButton18.UseVisualStyleBackColor = true;
-            // 
-            // radioButton19
-            // 
-            radioButton19.AutoSize = true;
-            radioButton19.Font = new Font("Segoe UI Light", 9F);
-            radioButton19.Location = new Point(31, 101);
-            radioButton19.Name = "radioButton19";
-            radioButton19.Size = new Size(80, 24);
-            radioButton19.TabIndex = 2;
-            radioButton19.TabStop = true;
-            radioButton19.Text = "Option3";
-            radioButton19.UseVisualStyleBackColor = true;
-            // 
-            // radioButton20
-            // 
-            radioButton20.AutoSize = true;
-            radioButton20.Font = new Font("Segoe UI Light", 9F);
-            radioButton20.Location = new Point(31, 41);
-            radioButton20.Name = "radioButton20";
-            radioButton20.Size = new Size(77, 24);
-            radioButton20.TabIndex = 0;
-            radioButton20.TabStop = true;
-            radioButton20.Text = "Option1";
-            radioButton20.UseVisualStyleBackColor = true;
-            // 
-            // groupBox6
-            // 
-            groupBox6.Controls.Add(radioButton21);
-            groupBox6.Controls.Add(radioButton22);
-            groupBox6.Controls.Add(radioButton23);
-            groupBox6.Controls.Add(radioButton24);
-            groupBox6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox6.Location = new Point(279, 283);
-            groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(250, 166);
-            groupBox6.TabIndex = 19;
-            groupBox6.TabStop = false;
-            groupBox6.Text = "Question1";
-            // 
-            // radioButton21
-            // 
-            radioButton21.AutoSize = true;
-            radioButton21.Font = new Font("Segoe UI Light", 9F);
-            radioButton21.Location = new Point(31, 71);
-            radioButton21.Name = "radioButton21";
-            radioButton21.Size = new Size(80, 24);
-            radioButton21.TabIndex = 4;
-            radioButton21.TabStop = true;
-            radioButton21.Text = "Option2";
-            radioButton21.UseVisualStyleBackColor = true;
-            // 
-            // radioButton22
-            // 
-            radioButton22.AutoSize = true;
-            radioButton22.Font = new Font("Segoe UI Light", 9F);
-            radioButton22.Location = new Point(31, 131);
-            radioButton22.Name = "radioButton22";
-            radioButton22.Size = new Size(80, 24);
-            radioButton22.TabIndex = 3;
-            radioButton22.TabStop = true;
-            radioButton22.Text = "Option4";
-            radioButton22.UseVisualStyleBackColor = true;
-            // 
-            // radioButton23
-            // 
-            radioButton23.AutoSize = true;
-            radioButton23.Font = new Font("Segoe UI Light", 9F);
-            radioButton23.Location = new Point(31, 101);
-            radioButton23.Name = "radioButton23";
-            radioButton23.Size = new Size(80, 24);
-            radioButton23.TabIndex = 2;
-            radioButton23.TabStop = true;
-            radioButton23.Text = "Option3";
-            radioButton23.UseVisualStyleBackColor = true;
-            // 
-            // radioButton24
-            // 
-            radioButton24.AutoSize = true;
-            radioButton24.Font = new Font("Segoe UI Light", 9F);
-            radioButton24.Location = new Point(31, 41);
-            radioButton24.Name = "radioButton24";
-            radioButton24.Size = new Size(77, 24);
-            radioButton24.TabIndex = 0;
-            radioButton24.TabStop = true;
-            radioButton24.Text = "Option1";
-            radioButton24.UseVisualStyleBackColor = true;
-            // 
-            // groupBox7
-            // 
-            groupBox7.Controls.Add(radioButton25);
-            groupBox7.Controls.Add(radioButton26);
-            groupBox7.Controls.Add(radioButton27);
-            groupBox7.Controls.Add(radioButton28);
-            groupBox7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox7.Location = new Point(12, 283);
-            groupBox7.Name = "groupBox7";
-            groupBox7.Size = new Size(250, 166);
-            groupBox7.TabIndex = 18;
-            groupBox7.TabStop = false;
-            groupBox7.Text = "Question1";
-            // 
-            // radioButton25
-            // 
-            radioButton25.AutoSize = true;
-            radioButton25.Font = new Font("Segoe UI Light", 9F);
-            radioButton25.Location = new Point(31, 71);
-            radioButton25.Name = "radioButton25";
-            radioButton25.Size = new Size(80, 24);
-            radioButton25.TabIndex = 4;
-            radioButton25.TabStop = true;
-            radioButton25.Text = "Option2";
-            radioButton25.UseVisualStyleBackColor = true;
-            // 
-            // radioButton26
-            // 
-            radioButton26.AutoSize = true;
-            radioButton26.Font = new Font("Segoe UI Light", 9F);
-            radioButton26.Location = new Point(31, 131);
-            radioButton26.Name = "radioButton26";
-            radioButton26.Size = new Size(80, 24);
-            radioButton26.TabIndex = 3;
-            radioButton26.TabStop = true;
-            radioButton26.Text = "Option4";
-            radioButton26.UseVisualStyleBackColor = true;
-            // 
-            // radioButton27
-            // 
-            radioButton27.AutoSize = true;
-            radioButton27.Font = new Font("Segoe UI Light", 9F);
-            radioButton27.Location = new Point(31, 101);
-            radioButton27.Name = "radioButton27";
-            radioButton27.Size = new Size(80, 24);
-            radioButton27.TabIndex = 2;
-            radioButton27.TabStop = true;
-            radioButton27.Text = "Option3";
-            radioButton27.UseVisualStyleBackColor = true;
-            // 
-            // radioButton28
-            // 
-            radioButton28.AutoSize = true;
-            radioButton28.Font = new Font("Segoe UI Light", 9F);
-            radioButton28.Location = new Point(31, 41);
-            radioButton28.Name = "radioButton28";
-            radioButton28.Size = new Size(77, 24);
-            radioButton28.TabIndex = 0;
-            radioButton28.TabStop = true;
-            radioButton28.Text = "Option1";
-            radioButton28.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            groupBox3.Controls.Add(radioButton9);
-            groupBox3.Controls.Add(radioButton10);
-            groupBox3.Controls.Add(radioButton11);
-            groupBox3.Controls.Add(radioButton12);
-            groupBox3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox3.Location = new Point(810, 100);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(250, 166);
-            groupBox3.TabIndex = 17;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Question1";
-            // 
-            // radioButton9
-            // 
-            radioButton9.AutoSize = true;
-            radioButton9.Font = new Font("Segoe UI Light", 9F);
-            radioButton9.Location = new Point(31, 71);
-            radioButton9.Name = "radioButton9";
-            radioButton9.Size = new Size(80, 24);
-            radioButton9.TabIndex = 4;
-            radioButton9.TabStop = true;
-            radioButton9.Text = "Option2";
-            radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            radioButton10.AutoSize = true;
-            radioButton10.Font = new Font("Segoe UI Light", 9F);
-            radioButton10.Location = new Point(31, 131);
-            radioButton10.Name = "radioButton10";
-            radioButton10.Size = new Size(80, 24);
-            radioButton10.TabIndex = 3;
-            radioButton10.TabStop = true;
-            radioButton10.Text = "Option4";
-            radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // radioButton11
-            // 
-            radioButton11.AutoSize = true;
-            radioButton11.Font = new Font("Segoe UI Light", 9F);
-            radioButton11.Location = new Point(31, 101);
-            radioButton11.Name = "radioButton11";
-            radioButton11.Size = new Size(80, 24);
-            radioButton11.TabIndex = 2;
-            radioButton11.TabStop = true;
-            radioButton11.Text = "Option3";
-            radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // radioButton12
-            // 
-            radioButton12.AutoSize = true;
-            radioButton12.Font = new Font("Segoe UI Light", 9F);
-            radioButton12.Location = new Point(31, 41);
-            radioButton12.Name = "radioButton12";
-            radioButton12.Size = new Size(77, 24);
-            radioButton12.TabIndex = 0;
-            radioButton12.TabStop = true;
-            radioButton12.Text = "Option1";
-            radioButton12.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(radioButton5);
-            groupBox2.Controls.Add(radioButton6);
-            groupBox2.Controls.Add(radioButton7);
-            groupBox2.Controls.Add(radioButton8);
-            groupBox2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(545, 100);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(250, 166);
-            groupBox2.TabIndex = 16;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Question1";
-            // 
-            // radioButton5
-            // 
-            radioButton5.AutoSize = true;
-            radioButton5.Font = new Font("Segoe UI Light", 9F);
-            radioButton5.Location = new Point(31, 71);
-            radioButton5.Name = "radioButton5";
-            radioButton5.Size = new Size(80, 24);
-            radioButton5.TabIndex = 4;
-            radioButton5.TabStop = true;
-            radioButton5.Text = "Option2";
-            radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            radioButton6.AutoSize = true;
-            radioButton6.Font = new Font("Segoe UI Light", 9F);
-            radioButton6.Location = new Point(31, 131);
-            radioButton6.Name = "radioButton6";
-            radioButton6.Size = new Size(80, 24);
-            radioButton6.TabIndex = 3;
-            radioButton6.TabStop = true;
-            radioButton6.Text = "Option4";
-            radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            radioButton7.AutoSize = true;
-            radioButton7.Font = new Font("Segoe UI Light", 9F);
-            radioButton7.Location = new Point(31, 101);
-            radioButton7.Name = "radioButton7";
-            radioButton7.Size = new Size(80, 24);
-            radioButton7.TabIndex = 2;
-            radioButton7.TabStop = true;
-            radioButton7.Text = "Option3";
-            radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            radioButton8.AutoSize = true;
-            radioButton8.Font = new Font("Segoe UI Light", 9F);
-            radioButton8.Location = new Point(31, 41);
-            radioButton8.Name = "radioButton8";
-            radioButton8.Size = new Size(77, 24);
-            radioButton8.TabIndex = 0;
-            radioButton8.TabStop = true;
-            radioButton8.Text = "Option1";
-            radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(radioButton1);
-            groupBox1.Controls.Add(radioButton2);
-            groupBox1.Controls.Add(radioButton3);
-            groupBox1.Controls.Add(radioButton4);
-            groupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(279, 100);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(250, 166);
-            groupBox1.TabIndex = 15;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Question1";
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Segoe UI Light", 9F);
-            radioButton1.Location = new Point(31, 71);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(80, 24);
-            radioButton1.TabIndex = 4;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Option2";
-            radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Segoe UI Light", 9F);
-            radioButton2.Location = new Point(31, 131);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(80, 24);
-            radioButton2.TabIndex = 3;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Option4";
-            radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            radioButton3.AutoSize = true;
-            radioButton3.Font = new Font("Segoe UI Light", 9F);
-            radioButton3.Location = new Point(31, 101);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(80, 24);
-            radioButton3.TabIndex = 2;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Option3";
-            radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            radioButton4.AutoSize = true;
-            radioButton4.Font = new Font("Segoe UI Light", 9F);
-            radioButton4.Location = new Point(31, 41);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(77, 24);
-            radioButton4.TabIndex = 0;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Option1";
-            radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // Qsn1
-            // 
-            Qsn1.Controls.Add(optn2);
-            Qsn1.Controls.Add(optn4);
-            Qsn1.Controls.Add(optn3);
-            Qsn1.Controls.Add(optn1);
-            Qsn1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Qsn1.Location = new Point(12, 100);
-            Qsn1.Name = "Qsn1";
-            Qsn1.Size = new Size(250, 166);
-            Qsn1.TabIndex = 14;
-            Qsn1.TabStop = false;
-            Qsn1.Text = "Question1";
-            // 
-            // optn2
-            // 
-            optn2.AutoSize = true;
-            optn2.Font = new Font("Segoe UI Light", 9F);
-            optn2.Location = new Point(31, 71);
-            optn2.Name = "optn2";
-            optn2.Size = new Size(80, 24);
-            optn2.TabIndex = 4;
-            optn2.TabStop = true;
-            optn2.Text = "Option2";
-            optn2.UseVisualStyleBackColor = true;
-            // 
-            // optn4
-            // 
-            optn4.AutoSize = true;
-            optn4.Font = new Font("Segoe UI Light", 9F);
-            optn4.Location = new Point(31, 131);
-            optn4.Name = "optn4";
-            optn4.Size = new Size(80, 24);
-            optn4.TabIndex = 3;
-            optn4.TabStop = true;
-            optn4.Text = "Option4";
-            optn4.UseVisualStyleBackColor = true;
-            // 
-            // optn3
-            // 
-            optn3.AutoSize = true;
-            optn3.Font = new Font("Segoe UI Light", 9F);
-            optn3.Location = new Point(31, 101);
-            optn3.Name = "optn3";
-            optn3.Size = new Size(80, 24);
-            optn3.TabIndex = 2;
-            optn3.TabStop = true;
-            optn3.Text = "Option3";
-            optn3.UseVisualStyleBackColor = true;
-            // 
-            // optn1
-            // 
-            optn1.AutoSize = true;
-            optn1.Font = new Font("Segoe UI Light", 9F);
-            optn1.Location = new Point(31, 41);
-            optn1.Name = "optn1";
-            optn1.Size = new Size(77, 24);
-            optn1.TabIndex = 0;
-            optn1.TabStop = true;
-            optn1.Text = "Option1";
-            optn1.UseVisualStyleBackColor = true;
-            // 
-            // SubjectLabel
-            // 
-            SubjectLabel.AutoSize = true;
-            SubjectLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SubjectLabel.Location = new Point(897, 38);
-            SubjectLabel.Name = "SubjectLabel";
-            SubjectLabel.Size = new Size(60, 20);
-            SubjectLabel.TabIndex = 25;
-            SubjectLabel.Text = "Subject";
+            // QTimep
+            // 
+            QTimep.Format = DateTimePickerFormat.Time;
+            QTimep.Location = new Point(936, 34);
+            QTimep.Name = "QTimep";
+            QTimep.Size = new Size(140, 27);
+            QTimep.TabIndex = 28;
+            // 
+            // QDateP
+            // 
+            QDateP.Format = DateTimePickerFormat.Short;
+            QDateP.Location = new Point(786, 34);
+            QDateP.Name = "QDateP";
+            QDateP.Size = new Size(135, 27);
+            QDateP.TabIndex = 27;
+            QDateP.Visible = false;
             // 
             // panel1
             // 
-            panel1.Controls.Add(timeLabel);
-            panel1.Location = new Point(882, 619);
+            panel1.Controls.Add(TimeLbl);
+            panel1.Controls.Add(TimingBar);
+            panel1.Location = new Point(897, 589);
             panel1.Name = "panel1";
-            panel1.Size = new Size(169, 65);
+            panel1.Size = new Size(169, 85);
             panel1.TabIndex = 26;
+            // 
+            // TimeLbl
+            // 
+            TimeLbl.AutoSize = true;
+            TimeLbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TimeLbl.Location = new Point(39, 52);
+            TimeLbl.Name = "TimeLbl";
+            TimeLbl.Size = new Size(106, 25);
+            TimeLbl.TabIndex = 24;
+            TimeLbl.Text = "Time: 5min";
+            // 
+            // TimingBar
+            // 
+            TimingBar.Location = new Point(29, 18);
+            TimingBar.Maximum = 300;
+            TimingBar.Name = "TimingBar";
+            TimingBar.Size = new Size(125, 29);
+            TimingBar.Step = -1;
+            TimingBar.TabIndex = 28;
+            // 
+            // SubjectLbl
+            // 
+            SubjectLbl.AutoSize = true;
+            SubjectLbl.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SubjectLbl.Location = new Point(781, 9);
+            SubjectLbl.Name = "SubjectLbl";
+            SubjectLbl.Size = new Size(60, 20);
+            SubjectLbl.TabIndex = 25;
+            SubjectLbl.Text = "Subject";
+            // 
+            // Q10
+            // 
+            Q10.Controls.Add(Q1002);
+            Q10.Controls.Add(Q1004);
+            Q10.Controls.Add(Q1003);
+            Q10.Controls.Add(Q1001);
+            Q10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Q10.Location = new Point(545, 455);
+            Q10.Name = "Q10";
+            Q10.Size = new Size(250, 166);
+            Q10.TabIndex = 23;
+            Q10.TabStop = false;
+            Q10.Text = "Question1";
+            // 
+            // Q1002
+            // 
+            Q1002.AutoSize = true;
+            Q1002.Font = new Font("Segoe UI Light", 9F);
+            Q1002.Location = new Point(31, 71);
+            Q1002.Name = "Q1002";
+            Q1002.Size = new Size(80, 24);
+            Q1002.TabIndex = 4;
+            Q1002.TabStop = true;
+            Q1002.Text = "Option2";
+            Q1002.UseVisualStyleBackColor = true;
+            // 
+            // Q1004
+            // 
+            Q1004.AutoSize = true;
+            Q1004.Font = new Font("Segoe UI Light", 9F);
+            Q1004.Location = new Point(31, 131);
+            Q1004.Name = "Q1004";
+            Q1004.Size = new Size(80, 24);
+            Q1004.TabIndex = 3;
+            Q1004.TabStop = true;
+            Q1004.Text = "Option4";
+            Q1004.UseVisualStyleBackColor = true;
+            // 
+            // Q1003
+            // 
+            Q1003.AutoSize = true;
+            Q1003.Font = new Font("Segoe UI Light", 9F);
+            Q1003.Location = new Point(31, 101);
+            Q1003.Name = "Q1003";
+            Q1003.Size = new Size(80, 24);
+            Q1003.TabIndex = 2;
+            Q1003.TabStop = true;
+            Q1003.Text = "Option3";
+            Q1003.UseVisualStyleBackColor = true;
+            // 
+            // Q1001
+            // 
+            Q1001.AutoSize = true;
+            Q1001.Font = new Font("Segoe UI Light", 9F);
+            Q1001.Location = new Point(31, 41);
+            Q1001.Name = "Q1001";
+            Q1001.Size = new Size(77, 24);
+            Q1001.TabIndex = 0;
+            Q1001.TabStop = true;
+            Q1001.Text = "Option1";
+            Q1001.UseVisualStyleBackColor = true;
+            // 
+            // Q9
+            // 
+            Q9.Controls.Add(Q902);
+            Q9.Controls.Add(Q904);
+            Q9.Controls.Add(Q903);
+            Q9.Controls.Add(Q901);
+            Q9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Q9.Location = new Point(279, 455);
+            Q9.Name = "Q9";
+            Q9.Size = new Size(250, 166);
+            Q9.TabIndex = 22;
+            Q9.TabStop = false;
+            Q9.Text = "Question1";
+            // 
+            // Q902
+            // 
+            Q902.AutoSize = true;
+            Q902.Font = new Font("Segoe UI Light", 9F);
+            Q902.Location = new Point(31, 71);
+            Q902.Name = "Q902";
+            Q902.Size = new Size(80, 24);
+            Q902.TabIndex = 4;
+            Q902.TabStop = true;
+            Q902.Text = "Option2";
+            Q902.UseVisualStyleBackColor = true;
+            // 
+            // Q904
+            // 
+            Q904.AutoSize = true;
+            Q904.Font = new Font("Segoe UI Light", 9F);
+            Q904.Location = new Point(31, 131);
+            Q904.Name = "Q904";
+            Q904.Size = new Size(80, 24);
+            Q904.TabIndex = 3;
+            Q904.TabStop = true;
+            Q904.Text = "Option4";
+            Q904.UseVisualStyleBackColor = true;
+            // 
+            // Q903
+            // 
+            Q903.AutoSize = true;
+            Q903.Font = new Font("Segoe UI Light", 9F);
+            Q903.Location = new Point(31, 101);
+            Q903.Name = "Q903";
+            Q903.Size = new Size(80, 24);
+            Q903.TabIndex = 2;
+            Q903.TabStop = true;
+            Q903.Text = "Option3";
+            Q903.UseVisualStyleBackColor = true;
+            // 
+            // Q901
+            // 
+            Q901.AutoSize = true;
+            Q901.Font = new Font("Segoe UI Light", 9F);
+            Q901.Location = new Point(31, 41);
+            Q901.Name = "Q901";
+            Q901.Size = new Size(77, 24);
+            Q901.TabIndex = 0;
+            Q901.TabStop = true;
+            Q901.Text = "Option1";
+            Q901.UseVisualStyleBackColor = true;
+            // 
+            // Q8
+            // 
+            Q8.Controls.Add(Q802);
+            Q8.Controls.Add(Q804);
+            Q8.Controls.Add(Q803);
+            Q8.Controls.Add(Q801);
+            Q8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Q8.Location = new Point(810, 283);
+            Q8.Name = "Q8";
+            Q8.Size = new Size(250, 166);
+            Q8.TabIndex = 21;
+            Q8.TabStop = false;
+            Q8.Text = "Question1";
+            // 
+            // Q802
+            // 
+            Q802.AutoSize = true;
+            Q802.Font = new Font("Segoe UI Light", 9F);
+            Q802.Location = new Point(31, 71);
+            Q802.Name = "Q802";
+            Q802.Size = new Size(80, 24);
+            Q802.TabIndex = 4;
+            Q802.TabStop = true;
+            Q802.Text = "Option2";
+            Q802.UseVisualStyleBackColor = true;
+            // 
+            // Q804
+            // 
+            Q804.AutoSize = true;
+            Q804.Font = new Font("Segoe UI Light", 9F);
+            Q804.Location = new Point(31, 131);
+            Q804.Name = "Q804";
+            Q804.Size = new Size(80, 24);
+            Q804.TabIndex = 3;
+            Q804.TabStop = true;
+            Q804.Text = "Option4";
+            Q804.UseVisualStyleBackColor = true;
+            // 
+            // Q803
+            // 
+            Q803.AutoSize = true;
+            Q803.Font = new Font("Segoe UI Light", 9F);
+            Q803.Location = new Point(31, 101);
+            Q803.Name = "Q803";
+            Q803.Size = new Size(80, 24);
+            Q803.TabIndex = 2;
+            Q803.TabStop = true;
+            Q803.Text = "Option3";
+            Q803.UseVisualStyleBackColor = true;
+            // 
+            // Q801
+            // 
+            Q801.AutoSize = true;
+            Q801.Font = new Font("Segoe UI Light", 9F);
+            Q801.Location = new Point(31, 41);
+            Q801.Name = "Q801";
+            Q801.Size = new Size(77, 24);
+            Q801.TabIndex = 0;
+            Q801.TabStop = true;
+            Q801.Text = "Option1";
+            Q801.UseVisualStyleBackColor = true;
+            // 
+            // Q7
+            // 
+            Q7.Controls.Add(Q702);
+            Q7.Controls.Add(Q704);
+            Q7.Controls.Add(Q703);
+            Q7.Controls.Add(Q701);
+            Q7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Q7.Location = new Point(545, 283);
+            Q7.Name = "Q7";
+            Q7.Size = new Size(250, 166);
+            Q7.TabIndex = 20;
+            Q7.TabStop = false;
+            Q7.Text = "Question1";
+            // 
+            // Q702
+            // 
+            Q702.AutoSize = true;
+            Q702.Font = new Font("Segoe UI Light", 9F);
+            Q702.Location = new Point(31, 71);
+            Q702.Name = "Q702";
+            Q702.Size = new Size(80, 24);
+            Q702.TabIndex = 4;
+            Q702.TabStop = true;
+            Q702.Text = "Option2";
+            Q702.UseVisualStyleBackColor = true;
+            // 
+            // Q704
+            // 
+            Q704.AutoSize = true;
+            Q704.Font = new Font("Segoe UI Light", 9F);
+            Q704.Location = new Point(31, 131);
+            Q704.Name = "Q704";
+            Q704.Size = new Size(80, 24);
+            Q704.TabIndex = 3;
+            Q704.TabStop = true;
+            Q704.Text = "Option4";
+            Q704.UseVisualStyleBackColor = true;
+            // 
+            // Q703
+            // 
+            Q703.AutoSize = true;
+            Q703.Font = new Font("Segoe UI Light", 9F);
+            Q703.Location = new Point(31, 101);
+            Q703.Name = "Q703";
+            Q703.Size = new Size(80, 24);
+            Q703.TabIndex = 2;
+            Q703.TabStop = true;
+            Q703.Text = "Option3";
+            Q703.UseVisualStyleBackColor = true;
+            // 
+            // Q701
+            // 
+            Q701.AutoSize = true;
+            Q701.Font = new Font("Segoe UI Light", 9F);
+            Q701.Location = new Point(31, 41);
+            Q701.Name = "Q701";
+            Q701.Size = new Size(77, 24);
+            Q701.TabIndex = 0;
+            Q701.TabStop = true;
+            Q701.Text = "Option1";
+            Q701.UseVisualStyleBackColor = true;
+            // 
+            // Q6
+            // 
+            Q6.Controls.Add(Q602);
+            Q6.Controls.Add(Q604);
+            Q6.Controls.Add(Q603);
+            Q6.Controls.Add(Q601);
+            Q6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Q6.Location = new Point(279, 283);
+            Q6.Name = "Q6";
+            Q6.Size = new Size(250, 166);
+            Q6.TabIndex = 19;
+            Q6.TabStop = false;
+            Q6.Text = "Question1";
+            // 
+            // Q602
+            // 
+            Q602.AutoSize = true;
+            Q602.Font = new Font("Segoe UI Light", 9F);
+            Q602.Location = new Point(31, 71);
+            Q602.Name = "Q602";
+            Q602.Size = new Size(80, 24);
+            Q602.TabIndex = 4;
+            Q602.TabStop = true;
+            Q602.Text = "Option2";
+            Q602.UseVisualStyleBackColor = true;
+            // 
+            // Q604
+            // 
+            Q604.AutoSize = true;
+            Q604.Font = new Font("Segoe UI Light", 9F);
+            Q604.Location = new Point(31, 131);
+            Q604.Name = "Q604";
+            Q604.Size = new Size(80, 24);
+            Q604.TabIndex = 3;
+            Q604.TabStop = true;
+            Q604.Text = "Option4";
+            Q604.UseVisualStyleBackColor = true;
+            // 
+            // Q603
+            // 
+            Q603.AutoSize = true;
+            Q603.Font = new Font("Segoe UI Light", 9F);
+            Q603.Location = new Point(31, 101);
+            Q603.Name = "Q603";
+            Q603.Size = new Size(80, 24);
+            Q603.TabIndex = 2;
+            Q603.TabStop = true;
+            Q603.Text = "Option3";
+            Q603.UseVisualStyleBackColor = true;
+            // 
+            // Q601
+            // 
+            Q601.AutoSize = true;
+            Q601.Font = new Font("Segoe UI Light", 9F);
+            Q601.Location = new Point(31, 41);
+            Q601.Name = "Q601";
+            Q601.Size = new Size(77, 24);
+            Q601.TabIndex = 0;
+            Q601.TabStop = true;
+            Q601.Text = "Option1";
+            Q601.UseVisualStyleBackColor = true;
+            // 
+            // Q5
+            // 
+            Q5.Controls.Add(Q502);
+            Q5.Controls.Add(Q504);
+            Q5.Controls.Add(Q503);
+            Q5.Controls.Add(Q501);
+            Q5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Q5.Location = new Point(12, 283);
+            Q5.Name = "Q5";
+            Q5.Size = new Size(250, 166);
+            Q5.TabIndex = 18;
+            Q5.TabStop = false;
+            Q5.Text = "Question1";
+            // 
+            // Q502
+            // 
+            Q502.AutoSize = true;
+            Q502.Font = new Font("Segoe UI Light", 9F);
+            Q502.Location = new Point(31, 71);
+            Q502.Name = "Q502";
+            Q502.Size = new Size(80, 24);
+            Q502.TabIndex = 4;
+            Q502.TabStop = true;
+            Q502.Text = "Option2";
+            Q502.UseVisualStyleBackColor = true;
+            // 
+            // Q504
+            // 
+            Q504.AutoSize = true;
+            Q504.Font = new Font("Segoe UI Light", 9F);
+            Q504.Location = new Point(31, 131);
+            Q504.Name = "Q504";
+            Q504.Size = new Size(80, 24);
+            Q504.TabIndex = 3;
+            Q504.TabStop = true;
+            Q504.Text = "Option4";
+            Q504.UseVisualStyleBackColor = true;
+            // 
+            // Q503
+            // 
+            Q503.AutoSize = true;
+            Q503.Font = new Font("Segoe UI Light", 9F);
+            Q503.Location = new Point(31, 101);
+            Q503.Name = "Q503";
+            Q503.Size = new Size(80, 24);
+            Q503.TabIndex = 2;
+            Q503.TabStop = true;
+            Q503.Text = "Option3";
+            Q503.UseVisualStyleBackColor = true;
+            // 
+            // Q501
+            // 
+            Q501.AutoSize = true;
+            Q501.Font = new Font("Segoe UI Light", 9F);
+            Q501.Location = new Point(31, 41);
+            Q501.Name = "Q501";
+            Q501.Size = new Size(77, 24);
+            Q501.TabIndex = 0;
+            Q501.TabStop = true;
+            Q501.Text = "Option1";
+            Q501.UseVisualStyleBackColor = true;
+            // 
+            // Q4
+            // 
+            Q4.Controls.Add(Q402);
+            Q4.Controls.Add(Q404);
+            Q4.Controls.Add(Q403);
+            Q4.Controls.Add(Q401);
+            Q4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Q4.Location = new Point(810, 100);
+            Q4.Name = "Q4";
+            Q4.Size = new Size(250, 166);
+            Q4.TabIndex = 17;
+            Q4.TabStop = false;
+            Q4.Text = "Question1";
+            // 
+            // Q402
+            // 
+            Q402.AutoSize = true;
+            Q402.Font = new Font("Segoe UI Light", 9F);
+            Q402.Location = new Point(31, 71);
+            Q402.Name = "Q402";
+            Q402.Size = new Size(80, 24);
+            Q402.TabIndex = 4;
+            Q402.TabStop = true;
+            Q402.Text = "Option2";
+            Q402.UseVisualStyleBackColor = true;
+            // 
+            // Q404
+            // 
+            Q404.AutoSize = true;
+            Q404.Font = new Font("Segoe UI Light", 9F);
+            Q404.Location = new Point(31, 131);
+            Q404.Name = "Q404";
+            Q404.Size = new Size(80, 24);
+            Q404.TabIndex = 3;
+            Q404.TabStop = true;
+            Q404.Text = "Option4";
+            Q404.UseVisualStyleBackColor = true;
+            // 
+            // Q403
+            // 
+            Q403.AutoSize = true;
+            Q403.Font = new Font("Segoe UI Light", 9F);
+            Q403.Location = new Point(31, 101);
+            Q403.Name = "Q403";
+            Q403.Size = new Size(80, 24);
+            Q403.TabIndex = 2;
+            Q403.TabStop = true;
+            Q403.Text = "Option3";
+            Q403.UseVisualStyleBackColor = true;
+            // 
+            // Q401
+            // 
+            Q401.AutoSize = true;
+            Q401.Font = new Font("Segoe UI Light", 9F);
+            Q401.Location = new Point(31, 41);
+            Q401.Name = "Q401";
+            Q401.Size = new Size(77, 24);
+            Q401.TabIndex = 0;
+            Q401.TabStop = true;
+            Q401.Text = "Option1";
+            Q401.UseVisualStyleBackColor = true;
+            // 
+            // Q3
+            // 
+            Q3.Controls.Add(Q302);
+            Q3.Controls.Add(Q304);
+            Q3.Controls.Add(Q303);
+            Q3.Controls.Add(Q301);
+            Q3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Q3.Location = new Point(545, 100);
+            Q3.Name = "Q3";
+            Q3.Size = new Size(250, 166);
+            Q3.TabIndex = 16;
+            Q3.TabStop = false;
+            Q3.Text = "Question1";
+            // 
+            // Q302
+            // 
+            Q302.AutoSize = true;
+            Q302.Font = new Font("Segoe UI Light", 9F);
+            Q302.Location = new Point(31, 71);
+            Q302.Name = "Q302";
+            Q302.Size = new Size(80, 24);
+            Q302.TabIndex = 4;
+            Q302.TabStop = true;
+            Q302.Text = "Option2";
+            Q302.UseVisualStyleBackColor = true;
+            // 
+            // Q304
+            // 
+            Q304.AutoSize = true;
+            Q304.Font = new Font("Segoe UI Light", 9F);
+            Q304.Location = new Point(31, 131);
+            Q304.Name = "Q304";
+            Q304.Size = new Size(80, 24);
+            Q304.TabIndex = 3;
+            Q304.TabStop = true;
+            Q304.Text = "Option4";
+            Q304.UseVisualStyleBackColor = true;
+            // 
+            // Q303
+            // 
+            Q303.AutoSize = true;
+            Q303.Font = new Font("Segoe UI Light", 9F);
+            Q303.Location = new Point(31, 101);
+            Q303.Name = "Q303";
+            Q303.Size = new Size(80, 24);
+            Q303.TabIndex = 2;
+            Q303.TabStop = true;
+            Q303.Text = "Option3";
+            Q303.UseVisualStyleBackColor = true;
+            // 
+            // Q301
+            // 
+            Q301.AutoSize = true;
+            Q301.Font = new Font("Segoe UI Light", 9F);
+            Q301.Location = new Point(31, 41);
+            Q301.Name = "Q301";
+            Q301.Size = new Size(77, 24);
+            Q301.TabIndex = 0;
+            Q301.TabStop = true;
+            Q301.Text = "Option1";
+            Q301.UseVisualStyleBackColor = true;
+            // 
+            // Q2
+            // 
+            Q2.Controls.Add(Q202);
+            Q2.Controls.Add(Q204);
+            Q2.Controls.Add(Q203);
+            Q2.Controls.Add(Q201);
+            Q2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Q2.Location = new Point(279, 100);
+            Q2.Name = "Q2";
+            Q2.Size = new Size(250, 166);
+            Q2.TabIndex = 15;
+            Q2.TabStop = false;
+            Q2.Text = "Question1";
+            // 
+            // Q202
+            // 
+            Q202.AutoSize = true;
+            Q202.Font = new Font("Segoe UI Light", 9F);
+            Q202.Location = new Point(31, 71);
+            Q202.Name = "Q202";
+            Q202.Size = new Size(80, 24);
+            Q202.TabIndex = 4;
+            Q202.TabStop = true;
+            Q202.Text = "Option2";
+            Q202.UseVisualStyleBackColor = true;
+            // 
+            // Q204
+            // 
+            Q204.AutoSize = true;
+            Q204.Font = new Font("Segoe UI Light", 9F);
+            Q204.Location = new Point(31, 131);
+            Q204.Name = "Q204";
+            Q204.Size = new Size(80, 24);
+            Q204.TabIndex = 3;
+            Q204.TabStop = true;
+            Q204.Text = "Option4";
+            Q204.UseVisualStyleBackColor = true;
+            // 
+            // Q203
+            // 
+            Q203.AutoSize = true;
+            Q203.Font = new Font("Segoe UI Light", 9F);
+            Q203.Location = new Point(31, 101);
+            Q203.Name = "Q203";
+            Q203.Size = new Size(80, 24);
+            Q203.TabIndex = 2;
+            Q203.TabStop = true;
+            Q203.Text = "Option3";
+            Q203.UseVisualStyleBackColor = true;
+            // 
+            // Q201
+            // 
+            Q201.AutoSize = true;
+            Q201.Font = new Font("Segoe UI Light", 9F);
+            Q201.Location = new Point(31, 41);
+            Q201.Name = "Q201";
+            Q201.Size = new Size(77, 24);
+            Q201.TabIndex = 0;
+            Q201.TabStop = true;
+            Q201.Text = "Option1";
+            Q201.UseVisualStyleBackColor = true;
+            // 
+            // Q1
+            // 
+            Q1.Controls.Add(Q102);
+            Q1.Controls.Add(Q104);
+            Q1.Controls.Add(Q103);
+            Q1.Controls.Add(Q101);
+            Q1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Q1.Location = new Point(12, 100);
+            Q1.Name = "Q1";
+            Q1.Size = new Size(250, 166);
+            Q1.TabIndex = 14;
+            Q1.TabStop = false;
+            Q1.Text = "Question1";
+            // 
+            // Q102
+            // 
+            Q102.AutoSize = true;
+            Q102.Font = new Font("Segoe UI Light", 9F);
+            Q102.Location = new Point(31, 71);
+            Q102.Name = "Q102";
+            Q102.Size = new Size(80, 24);
+            Q102.TabIndex = 4;
+            Q102.TabStop = true;
+            Q102.Text = "Option2";
+            Q102.UseVisualStyleBackColor = true;
+            // 
+            // Q104
+            // 
+            Q104.AutoSize = true;
+            Q104.Font = new Font("Segoe UI Light", 9F);
+            Q104.Location = new Point(31, 131);
+            Q104.Name = "Q104";
+            Q104.Size = new Size(80, 24);
+            Q104.TabIndex = 3;
+            Q104.TabStop = true;
+            Q104.Text = "Option4";
+            Q104.UseVisualStyleBackColor = true;
+            // 
+            // Q103
+            // 
+            Q103.AutoSize = true;
+            Q103.Font = new Font("Segoe UI Light", 9F);
+            Q103.Location = new Point(31, 101);
+            Q103.Name = "Q103";
+            Q103.Size = new Size(80, 24);
+            Q103.TabIndex = 2;
+            Q103.TabStop = true;
+            Q103.Text = "Option3";
+            Q103.UseVisualStyleBackColor = true;
+            // 
+            // Q101
+            // 
+            Q101.AutoSize = true;
+            Q101.Font = new Font("Segoe UI Light", 9F);
+            Q101.Location = new Point(31, 41);
+            Q101.Name = "Q101";
+            Q101.Size = new Size(77, 24);
+            Q101.TabIndex = 0;
+            Q101.TabStop = true;
+            Q101.Text = "Option1";
+            Q101.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
             // 
             // Exams
             // 
@@ -927,37 +981,38 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             QsnBack2.ResumeLayout(false);
+            QsnBack2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             QsnBack1.ResumeLayout(false);
             QsnBack1.PerformLayout();
-            groupBox8.ResumeLayout(false);
-            groupBox8.PerformLayout();
-            groupBox9.ResumeLayout(false);
-            groupBox9.PerformLayout();
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
-            groupBox5.ResumeLayout(false);
-            groupBox5.PerformLayout();
-            groupBox6.ResumeLayout(false);
-            groupBox6.PerformLayout();
-            groupBox7.ResumeLayout(false);
-            groupBox7.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            Qsn1.ResumeLayout(false);
-            Qsn1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            Q10.ResumeLayout(false);
+            Q10.PerformLayout();
+            Q9.ResumeLayout(false);
+            Q9.PerformLayout();
+            Q8.ResumeLayout(false);
+            Q8.PerformLayout();
+            Q7.ResumeLayout(false);
+            Q7.PerformLayout();
+            Q6.ResumeLayout(false);
+            Q6.PerformLayout();
+            Q5.ResumeLayout(false);
+            Q5.PerformLayout();
+            Q4.ResumeLayout(false);
+            Q4.PerformLayout();
+            Q3.ResumeLayout(false);
+            Q3.PerformLayout();
+            Q2.ResumeLayout(false);
+            Q2.PerformLayout();
+            Q1.ResumeLayout(false);
+            Q1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
         private DataGridView dataGridViewQsn;
-        private MaterialSkin.Controls.MaterialButton submitBtn;
+        private MaterialSkin.Controls.MaterialButton SubmitBtn;
         private Panel QsnQsnPanel;
         private Label QsnCandidates;
         private PictureBox pictureBox3;
@@ -969,58 +1024,63 @@
         private Panel QsnBack2;
         private PictureBox pictureBox4;
         private Panel QsnBack1;
-        private GroupBox Qsn1;
-        private GroupBox groupBox3;
-        private RadioButton radioButton9;
-        private RadioButton radioButton10;
-        private RadioButton radioButton11;
-        private RadioButton radioButton12;
-        private GroupBox groupBox2;
-        private RadioButton radioButton5;
-        private RadioButton radioButton6;
-        private RadioButton radioButton7;
-        private RadioButton radioButton8;
-        private GroupBox groupBox1;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private RadioButton radioButton3;
-        private RadioButton radioButton4;
-        private RadioButton optn2;
-        private RadioButton optn4;
-        private RadioButton optn3;
-        private RadioButton optn1;
-        private GroupBox groupBox8;
-        private RadioButton radioButton29;
-        private RadioButton radioButton30;
-        private RadioButton radioButton31;
-        private RadioButton radioButton32;
-        private GroupBox groupBox9;
-        private RadioButton radioButton33;
-        private RadioButton radioButton34;
-        private RadioButton radioButton35;
-        private RadioButton radioButton36;
-        private GroupBox groupBox4;
-        private RadioButton radioButton13;
-        private RadioButton radioButton14;
-        private RadioButton radioButton15;
-        private RadioButton radioButton16;
-        private GroupBox groupBox5;
-        private RadioButton radioButton17;
-        private RadioButton radioButton18;
-        private RadioButton radioButton19;
-        private RadioButton radioButton20;
-        private GroupBox groupBox6;
-        private RadioButton radioButton21;
-        private RadioButton radioButton22;
-        private RadioButton radioButton23;
-        private RadioButton radioButton24;
-        private GroupBox groupBox7;
-        private RadioButton radioButton25;
-        private RadioButton radioButton26;
-        private RadioButton radioButton27;
-        private RadioButton radioButton28;
-        private Label timeLabel;
-        private Label SubjectLabel;
+        private GroupBox Q1;
+        private GroupBox Q4;
+        private RadioButton Q402;
+        private RadioButton Q404;
+        private RadioButton Q403;
+        private RadioButton Q401;
+        private GroupBox Q3;
+        private RadioButton Q302;
+        private RadioButton Q304;
+        private RadioButton Q303;
+        private RadioButton Q301;
+        private GroupBox Q2;
+        private RadioButton Q202;
+        private RadioButton Q204;
+        private RadioButton Q203;
+        private RadioButton Q201;
+        private RadioButton Q102;
+        private RadioButton Q104;
+        private RadioButton Q103;
+        private RadioButton Q101;
+        private GroupBox Q10;
+        private RadioButton Q1002;
+        private RadioButton Q1004;
+        private RadioButton Q1003;
+        private RadioButton Q1001;
+        private GroupBox Q9;
+        private RadioButton Q902;
+        private RadioButton Q904;
+        private RadioButton Q903;
+        private RadioButton Q901;
+        private GroupBox Q8;
+        private RadioButton Q802;
+        private RadioButton Q804;
+        private RadioButton Q803;
+        private RadioButton Q801;
+        private GroupBox Q7;
+        private RadioButton Q702;
+        private RadioButton Q704;
+        private RadioButton Q703;
+        private RadioButton Q701;
+        private GroupBox Q6;
+        private RadioButton Q602;
+        private RadioButton Q604;
+        private RadioButton Q603;
+        private RadioButton Q601;
+        private GroupBox Q5;
+        private RadioButton Q502;
+        private RadioButton Q504;
+        private RadioButton Q503;
+        private RadioButton Q501;
+        private Label TimeLbl;
+        private Label SubjectLbl;
         private Panel panel1;
+        private ProgressBar TimingBar;
+        private System.Windows.Forms.Timer timer1;
+        private Label CnameLbl;
+        private DateTimePicker QTimep;
+        private DateTimePicker QDateP;
     }
 }
