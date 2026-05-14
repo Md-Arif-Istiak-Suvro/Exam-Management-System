@@ -196,5 +196,12 @@ namespace Exam_Management_System
             Obj.Show();
             this.Hide();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            AdminLogin Obj = new AdminLogin();
+            Obj.Show();
+            this.Hide();
+        }
     }
 }

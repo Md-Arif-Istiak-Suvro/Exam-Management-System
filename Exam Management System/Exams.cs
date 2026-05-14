@@ -103,7 +103,7 @@ namespace Exam_Management_System
 
         private void CalculateScore()
         {
-            FinalScore = 0; 
+            FinalScore = 0;
 
             for (int i = 0; i < 10; i++)
             {
@@ -112,7 +112,7 @@ namespace Exam_Management_System
 
                 for (int j = 1; j <= 4; j++)
                 {
-                   
+
                     Control[] rb = this.Controls.Find("Q" + qNum + "0" + j, true);
 
                     if (rb.Length > 0 && ((RadioButton)rb[0]).Checked)
@@ -131,7 +131,7 @@ namespace Exam_Management_System
         {
             timer1.Stop();
             CalculateScore();
-            InsertResult();  
+            InsertResult();
             MessageBox.Show("Exam Finished!\nYour Total Score: " + FinalScore + " / 10");
 
             Login log = new Login();
@@ -149,7 +149,7 @@ namespace Exam_Management_System
                 cmd.Parameters.AddWithValue("@RS", SubjectLbl.Text);
                 cmd.Parameters.AddWithValue("@RC", CnameLbl.Text);
                 cmd.Parameters.AddWithValue("@RD", QDateP.Value.Date);
-                cmd.Parameters.AddWithValue("@RT", QTimep.Text); 
+                cmd.Parameters.AddWithValue("@RT", QTimep.Text);
                 cmd.Parameters.AddWithValue("@RSc", FinalScore);
 
                 cmd.ExecuteNonQuery();
@@ -161,6 +161,11 @@ namespace Exam_Management_System
                 MessageBox.Show("Error saving result: " + Ex.Message);
                 if (Con.State == ConnectionState.Open) Con.Close();
             }
+        }
+
+        private void QsnBack1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

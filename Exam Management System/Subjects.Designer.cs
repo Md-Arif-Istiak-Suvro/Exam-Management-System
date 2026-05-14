@@ -294,7 +294,7 @@
             // 
             // QsnBack1
             // 
-            QsnBack1.BackColor = Color.BlueViolet;
+            QsnBack1.BackColor = Color.MediumPurple;
             QsnBack1.Controls.Add(SubjectsDGV);
             QsnBack1.Controls.Add(SubjectLabel);
             QsnBack1.Controls.Add(ResetBtn);

@@ -259,7 +259,7 @@
             // 
             // QsnBack1
             // 
-            QsnBack1.BackColor = Color.BlueViolet;
+            QsnBack1.BackColor = Color.Lavender;
             QsnBack1.Controls.Add(QTimep);
             QsnBack1.Controls.Add(QDateP);
             QsnBack1.Controls.Add(panel1);
@@ -283,6 +283,7 @@
             QsnBack1.Name = "QsnBack1";
             QsnBack1.Size = new Size(1151, 687);
             QsnBack1.TabIndex = 2;
+            QsnBack1.Paint += QsnBack1_Paint;
             // 
             // QTimep
             // 

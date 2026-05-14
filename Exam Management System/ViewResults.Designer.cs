@@ -202,7 +202,7 @@
             // 
             // QsnBack1
             // 
-            QsnBack1.BackColor = Color.BlueViolet;
+            QsnBack1.BackColor = Color.MediumPurple;
             QsnBack1.Controls.Add(Cbox);
             QsnBack1.Controls.Add(SubjectCb);
             QsnBack1.Controls.Add(ResultsDGV);

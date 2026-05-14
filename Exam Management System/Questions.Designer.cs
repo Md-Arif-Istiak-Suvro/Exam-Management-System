@@ -67,7 +67,7 @@
             // 
             // QsnBack1
             // 
-            QsnBack1.BackColor = Color.BlueViolet;
+            QsnBack1.BackColor = Color.MediumPurple;
             QsnBack1.Controls.Add(QuestionsDGV);
             QsnBack1.Controls.Add(AnswerTb);
             QsnBack1.Controls.Add(QsnBankLabel);
@@ -448,6 +448,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox5.TabIndex = 19;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox4
             // 

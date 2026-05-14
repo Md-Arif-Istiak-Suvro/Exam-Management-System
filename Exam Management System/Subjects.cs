@@ -156,7 +156,7 @@ namespace Exam_Management_System
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Login Obj = new Login();
+            AdminLogin Obj = new AdminLogin();
             Obj.Show();
             this.Hide();
         }
