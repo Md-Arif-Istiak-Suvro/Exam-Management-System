@@ -130,6 +130,7 @@
             UnameTb.Name = "UnameTb";
             UnameTb.Size = new Size(300, 27);
             UnameTb.TabIndex = 29;
+            UnameTb.TextChanged += UnameTb_TextChanged;
             // 
             // PasswordTb
             // 

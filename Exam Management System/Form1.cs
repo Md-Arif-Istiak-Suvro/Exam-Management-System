@@ -69,9 +69,14 @@ namespace Exam_Management_System
 
         private void label1_Click(object sender, EventArgs e)
         {
-            AdminLogin Obj= new AdminLogin();
+            AdminLogin Obj = new AdminLogin();
             Obj.Show();
             this.Hide();
+        }
+
+        private void UnameTb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

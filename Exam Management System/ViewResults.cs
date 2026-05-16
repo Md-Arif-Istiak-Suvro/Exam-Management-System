@@ -116,32 +116,28 @@ namespace Exam_Management_System
 
             try
             {
-                // 2. Safety check for the connection
+               
                 if (Con.State == ConnectionState.Open) Con.Close();
                 Con.Open();
 
-                // 3. Use the correct table name (ResultTb1) and Parameterized SQL
+               
                 string Query = "SELECT * FROM ResultTb1 WHERE RCandidate = @Can";
 
                 SqlCommand cmd = new SqlCommand(Query, Con);
-                // We use .ToString() to ensure the value is passed correctly
+              
                 cmd.Parameters.AddWithValue("@Can", Cbox.SelectedValue.ToString());
 
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-
-                // 4. Update the Grid
                 ResultsDGV.DataSource = dt;
             }
             catch (Exception ex)
             {
-                // If it still fails, this will tell you exactly why (e.g., "Invalid Column Name")
                 MessageBox.Show("Filter Error: " + ex.Message);
             }
             finally
             {
-                // 5. Always close the connection to prevent the 'State is Open' error
                 if (Con.State == ConnectionState.Open) Con.Close();
             }
         }

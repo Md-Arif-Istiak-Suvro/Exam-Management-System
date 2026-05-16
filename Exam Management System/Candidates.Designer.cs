@@ -92,6 +92,7 @@
             CandidatesDGV.Location = new Point(3, 381);
             CandidatesDGV.Name = "CandidatesDGV";
             CandidatesDGV.RowHeadersWidth = 51;
+            CandidatesDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             CandidatesDGV.Size = new Size(1085, 303);
             CandidatesDGV.TabIndex = 15;
             CandidatesDGV.CellContentClick += CandidatesDGV_CellContentClick;
